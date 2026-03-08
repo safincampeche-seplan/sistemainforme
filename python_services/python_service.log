@@ -1,0 +1,26 @@
+INFO:     Will watch for changes in these directories: ['/Users/carlosf.caceres/Documents/PROYECTO SEPLAN/INFORME/capturainforme/python_services']
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [83906] using StatReload
+INFO:     Started server process [84000]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:56527 - "POST /export/word HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:56577 - "POST /export/word HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:56670 - "POST /export/word HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57358 - "POST /export/word HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59488 - "POST /export/word HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51550 - "POST /export/word HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51568 - "POST /export/word HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53675 - "POST /export/word HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53687 - "POST /export/word HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62031 - "POST /export/word HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49421 - "POST /export/word HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49462 - "POST /export/word HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49930 - "POST /export/word HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50711 - "POST /export/word HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50818 - "POST /export/word HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50878 - "POST /export/word HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50974 - "POST /export/word HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55122 - "POST /export/word HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60649 - "POST /export/word HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61999 - "POST /export/word HTTP/1.1" 200 OK

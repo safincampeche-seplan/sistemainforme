@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #334155; line-height: 1.6; }
+        .container { max-width: 600px; margin: 0 auto; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; }
+        .header { background-color: #9b1c31; color: white; padding: 24px; text-align: center; }
+        .content { padding: 32px; }
+        .footer { background-color: #f8fafc; padding: 16px; text-align: center; font-size: 12px; color: #64748b; }
+        .button { display: inline-block; background-color: #9b1c31; color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: bold; margin-top: 20px; }
+        .status-badge { display: inline-block; padding: 4px 12px; border-radius: 9999px; font-size: 12px; font-weight: bold; background-color: #f1f5f9; color: #475569; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 style="margin:0; font-size: 20px;">Sistema de Informe de Gobierno</h1>
+        </div>
+        <div class="content">
+            <h2 style="margin-top:0; color: #1e293b;">Actualización de Estatus</h2>
+            <p>Se ha registrado un cambio de estatus en la captura narrativa del PPA:</p>
+            <p style="font-weight: bold; font-size: 18px; color: #9b1c31;">{{ppa_name}}</p>
+            
+            <div style="margin: 20px 0; padding: 16px; background-color: #f8fafc; border-radius: 8px; border-left: 4px solid #9b1c31;">
+                <p style="margin:0;"><strong>Nuevo Estado:</strong> <span class="status-badge">{{status_label}}</span></p>
+                {{observations_section}}
+            </div>
+
+            <p>Puedes revisar los detalles y continuar con el proceso en el portal del sistema.</p>
+            
+            <div style="text-align: center;">
+                <a href="{{system_url}}" class="button">Ver en el Sistema</a>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Este es un correo automático, por favor no respondas a este mensaje.</p>
+            <p>&copy; 2026 SEPLAN - Gobierno del Estado</p>
+        </div>
+    </div>
+</body>
+</html>

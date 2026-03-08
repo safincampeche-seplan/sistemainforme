@@ -1,0 +1,223 @@
+
+> backend@1.0.0 dev
+> ts-node --transpile-only src/index.ts
+
+[dotenv@17.3.1] injecting env (0) from .env -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
+🚀 API Superior V2 corriendo en http://localhost:3001
+🤖 Bot de Telegram activo.
+✅ Conexión a Base de Datos de Producción estable.
+[2026-03-06T23:30:21.244Z] OPTIONS /api/tracking/narrativa/2473
+[2026-03-06T23:30:21.251Z] OPTIONS /api/tracking/narrativa/2473
+[2026-03-06T23:30:21.252Z] GET /api/tracking/narrativa/2473
+[2026-03-06T23:30:21.255Z] GET /api/tracking/narrativa/2473
+[2026-03-06T23:30:23.829Z] OPTIONS /api/export/word/narrative/2473
+[2026-03-06T23:30:23.832Z] GET /api/export/word/narrative/2473
+Export error: AxiosError [AggregateError]
+    at Function.from (file:///Users/carlosf.caceres/Documents/PROYECTO%20SEPLAN/INFORME/capturainforme/backend/node_modules/axios/lib/core/AxiosError.js:7:24)
+    at RedirectableRequest.handleRequestError (file:///Users/carlosf.caceres/Documents/PROYECTO%20SEPLAN/INFORME/capturainforme/backend/node_modules/axios/lib/adapters/http.js:866:27)
+    at RedirectableRequest.emit (node:events:518:28)
+    at RedirectableRequest.emit (node:domain:489:12)
+    at ClientRequest.eventHandlers.<computed> (/Users/carlosf.caceres/Documents/PROYECTO SEPLAN/INFORME/capturainforme/backend/node_modules/follow-redirects/index.js:49:24)
+    at ClientRequest.emit (node:events:518:28)
+    at ClientRequest.emit (node:domain:489:12)
+    at emitErrorEvent (node:_http_client:104:11)
+    at Socket.socketErrorListener (node:_http_client:518:5)
+    at Socket.emit (node:events:518:28)
+    at Socket.emit (node:domain:489:12)
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at processTicksAndRejections (node:internal/process/task_queues:90:21)
+    at Axios.request (file:///Users/carlosf.caceres/Documents/PROYECTO%20SEPLAN/INFORME/capturainforme/backend/node_modules/axios/lib/core/Axios.js:46:41)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async file:///Users/carlosf.caceres/Documents/PROYECTO%20SEPLAN/INFORME/capturainforme/backend/src/index.ts:2949:27 {
+  isAxiosError: true,
+  code: 'ECONNREFUSED',
+  config: {
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false,
+      legacyInterceptorReqResOrdering: true
+    },
+    adapter: [ 'xhr', 'http', 'fetch' ],
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 0,
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    env: { FormData: [Function], Blob: [class Blob] },
+    validateStatus: [Function: validateStatus],
+    headers: Object [AxiosHeaders] {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': 'application/json',
+      'User-Agent': 'axios/1.13.6',
+      'Content-Length': '513',
+      'Accept-Encoding': 'gzip, compress, deflate, br'
+    },
+    responseType: 'arraybuffer',
+    method: 'post',
+    url: 'http://localhost:8000/export/word',
+    data: '{"mission_name":"Narrativa E2E Prueba Automatizada","title_color":"#1E293B","theme_color":"#475569","subtheme_color":"#64748B","items":[{"title_code":1,"title_name":"PLANEACIÓN URBANA Y TERRITORIAL PARA UN CRECIMIENTO Y DESARROLLO SOSTENIBLE DEL ESTADO","theme_code":1,"theme_name":"SUMINISTRO Y CALIDAD EN EL SERVICIO ELÉCTRICO","subtheme_code":1,"subtheme_name":"-","content":"<p>Registro automatizado para verificar flujo completo E2E. Todos los sistemas funcionan correctamente.</p>","highlighted":"true"}]}',
+    allowAbsoluteUrls: true
+  },
+  request: <ref *1> Writable {
+    _events: {
+      close: undefined,
+      error: [Function: handleRequestError],
+      prefinish: undefined,
+      finish: undefined,
+      drain: undefined,
+      response: [Function: handleResponse],
+      socket: [Array],
+      abort: undefined
+    },
+    _writableState: WritableState {
+      highWaterMark: 65536,
+      length: 0,
+      corked: 0,
+      onwrite: [Function: bound onwrite],
+      writelen: 0,
+      bufferedIndex: 0,
+      pendingcb: 0,
+      [Symbol(kState)]: 17580812,
+      [Symbol(kBufferedValue)]: null
+    },
+    _maxListeners: undefined,
+    _options: {
+      maxRedirects: 21,
+      maxBodyLength: Infinity,
+      protocol: 'http:',
+      path: '/export/word',
+      method: 'POST',
+      headers: [Object: null prototype],
+      agents: [Object],
+      auth: undefined,
+      family: undefined,
+      beforeRedirect: [Function: dispatchBeforeRedirect],
+      beforeRedirects: [Object],
+      http2Options: undefined,
+      hostname: 'localhost',
+      port: '8000',
+      agent: undefined,
+      nativeProtocols: [Object],
+      pathname: '/export/word'
+    },
+    _ended: true,
+    _ending: true,
+    _redirectCount: 0,
+    _redirects: [],
+    _requestBodyLength: 513,
+    _requestBodyBuffers: [ [Object] ],
+    _eventsCount: 3,
+    _onNativeResponse: [Function (anonymous)],
+    _currentRequest: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: false,
+      _last: false,
+      chunkedEncoding: false,
+      shouldKeepAlive: true,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: true,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 513,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: false,
+      _header: 'POST /export/word HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'Content-Type: application/json\r\n' +
+        'User-Agent: axios/1.13.6\r\n' +
+        'Content-Length: 513\r\n' +
+        'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+        'Host: localhost:8000\r\n' +
+        'Connection: keep-alive\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'POST',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/export/word',
+      _ended: false,
+      res: null,
+      aborted: false,
+      timeoutCb: [Function: emitRequestTimeout],
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'localhost',
+      protocol: 'http:',
+      _redirectable: [Circular *1],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(corked)]: 0,
+      [Symbol(kChunkedBuffer)]: [],
+      [Symbol(kChunkedLength)]: 0,
+      [Symbol(kSocket)]: [Socket],
+      [Symbol(kOutHeaders)]: [Object: null prototype],
+      [Symbol(errored)]: null,
+      [Symbol(kHighWaterMark)]: 65536,
+      [Symbol(kRejectNonStandardBodyWrites)]: false,
+      [Symbol(kUniqueHeaders)]: null
+    },
+    _currentUrl: 'http://localhost:8000/export/word',
+    _timeout: null,
+    [Symbol(shapeMode)]: true,
+    [Symbol(kCapture)]: false
+  },
+  cause: AggregateError
+      at internalConnectMultiple (node:net:1134:18)
+      at afterConnectMultiple (node:net:1715:7) {
+    code: 'ECONNREFUSED',
+    [errors]: [ [Error], [Error] ]
+  }
+}
+[2026-03-06T23:31:49.570Z] OPTIONS /api/tracking/narrativa/2473
+[2026-03-06T23:31:49.571Z] OPTIONS /api/tracking/narrativa/2473
+[2026-03-06T23:31:49.571Z] GET /api/tracking/narrativa/2473
+[2026-03-06T23:31:49.576Z] GET /api/tracking/narrativa/2473
+[2026-03-06T23:31:51.668Z] OPTIONS /api/export/word/narrative/2473
+[2026-03-06T23:31:51.669Z] GET /api/export/word/narrative/2473
+Export error: <Buffer 7b 22 64 65 74 61 69 6c 22 3a 5b 7b 22 74 79 70 65 22 3a 22 73 74 72 69 6e 67 5f 74 79 70 65 22 2c 22 6c 6f 63 22 3a 5b 22 62 6f 64 79 22 2c 22 69 74 ... 295 more bytes>
+[2026-03-06T23:31:53.540Z] OPTIONS /api/tracking/narrativa/2473
+[2026-03-06T23:31:53.540Z] OPTIONS /api/tracking/narrativa/2473
+[2026-03-06T23:31:53.540Z] GET /api/tracking/narrativa/2473
+[2026-03-06T23:31:53.541Z] GET /api/tracking/narrativa/2473
+[2026-03-06T23:32:08.328Z] OPTIONS /api/auth/login
+[2026-03-06T23:32:08.329Z] POST /api/auth/login
+Login Successful: admin@seplan.gob.mx | Roles: SuperAdministrador | Mission: undefined
+[2026-03-06T23:32:08.394Z] OPTIONS /api/dashboard/stats?periodo=2026
+[2026-03-06T23:32:08.395Z] GET /api/dashboard/stats?periodo=2026
+[2026-03-06T23:32:08.396Z] OPTIONS /api/activities?periodo=2026
+[2026-03-06T23:32:08.397Z] GET /api/activities?periodo=2026
+[2026-03-06T23:32:08.407Z] GET /api/activities?periodo=2026
+[2026-03-06T23:32:08.411Z] GET /api/dashboard/stats?periodo=2026
+[2026-03-06T23:32:10.306Z] OPTIONS /api/narratives/inbox?periodo=2026
+[2026-03-06T23:32:10.307Z] GET /api/narratives/inbox?periodo=2026
+[2026-03-06T23:32:10.316Z] GET /api/narratives/inbox?periodo=2026
+[2026-03-06T23:32:11.560Z] OPTIONS /api/tracking/narrativa/2473
+[2026-03-06T23:32:11.560Z] GET /api/tracking/narrativa/2473
+[2026-03-06T23:32:11.563Z] GET /api/tracking/narrativa/2473
+[2026-03-06T23:32:12.642Z] OPTIONS /api/export/word/narrative/2473
+[2026-03-06T23:32:12.643Z] GET /api/export/word/narrative/2473
+Export error: <Buffer 7b 22 64 65 74 61 69 6c 22 3a 5b 7b 22 74 79 70 65 22 3a 22 73 74 72 69 6e 67 5f 74 79 70 65 22 2c 22 6c 6f 63 22 3a 5b 22 62 6f 64 79 22 2c 22 69 74 ... 295 more bytes>

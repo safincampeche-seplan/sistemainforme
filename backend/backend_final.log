@@ -1,0 +1,8 @@
+
+> backend@1.0.0 dev
+> ts-node --transpile-only src/index.ts
+
+[dotenv@17.3.1] injecting env (0) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+🚀 API Superior V2 corriendo en http://localhost:3001
+🤖 Bot de Telegram activo.
+✅ Conexión a Base de Datos de Producción estable.

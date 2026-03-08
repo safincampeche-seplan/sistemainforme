@@ -1,0 +1,705 @@
+
+> frontend@2.2.1 dev
+> next dev
+
+⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of /Users/carlosf.caceres/Documents/PROYECTO SEPLAN/INFORME/capturainforme/package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * /Users/carlosf.caceres/Documents/PROYECTO SEPLAN/INFORME/capturainforme/frontend/package-lock.json
+
+▲ Next.js 16.1.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.0.14:3000
+
+✓ Starting...
+✓ Ready in 521ms
+ GET /login 200 in 571ms (compile: 467ms, render: 104ms)
+ GET /login 200 in 120ms (compile: 14ms, render: 106ms)
+ GET /admin/dependencias 200 in 126ms (compile: 70ms, render: 56ms)
+ GET /captura-estadistica 200 in 37ms (compile: 25ms, render: 12ms)
+ GET /captura-estadistica 200 in 26ms (compile: 4ms, render: 22ms)
+ GET /login 200 in 9ms (compile: 2ms, render: 7ms)
+ GET / 200 in 34ms (compile: 22ms, render: 12ms)
+ GET /admin/dependencias 200 in 18ms (compile: 5ms, render: 13ms)
+ GET /admin/configuracion/periodos 200 in 53ms (compile: 42ms, render: 11ms)
+ GET /admin/configuracion/periodos 200 in 38ms (compile: 8ms, render: 30ms)
+ GET /admin/configuracion/periodos 200 in 30ms (compile: 6ms, render: 24ms)
+ GET /login 200 in 11ms (compile: 3ms, render: 8ms)
+ GET /login 200 in 27ms (compile: 8ms, render: 19ms)
+ GET / 200 in 33ms (compile: 16ms, render: 16ms)
+ GET /inbox/safin 200 in 50ms (compile: 37ms, render: 13ms)
+ GET /captura-estadistica 200 in 10ms (compile: 3ms, render: 7ms)
+ GET /login 200 in 20ms (compile: 6ms, render: 14ms)
+ GET /login 200 in 7ms (compile: 1273µs, render: 6ms)
+ GET / 200 in 12ms (compile: 3ms, render: 9ms)
+ GET /captura-narrativa 200 in 84ms (compile: 75ms, render: 9ms)
+ GET /captura-narrativa/historial 200 in 25ms (compile: 15ms, render: 10ms)
+ GET /login 200 in 77ms (compile: 38ms, render: 39ms)
+ GET /login 200 in 10ms (compile: 2ms, render: 8ms)
+ GET / 200 in 12ms (compile: 3ms, render: 9ms)
+ GET /inbox 200 in 97ms (compile: 85ms, render: 12ms)
+ GET /inbox/safin 200 in 13ms (compile: 4ms, render: 8ms)
+ GET /inbox/narrativa/2473 200 in 350ms (compile: 338ms, render: 12ms)
+ GET /inbox/narrativa/2473 200 in 24ms (compile: 6ms, render: 18ms)
+ GET /inbox/narrativa/2473 200 in 43ms (compile: 6ms, render: 37ms)
+ GET /inbox/narrativa/2473 200 in 45ms (compile: 9ms, render: 36ms)
+ GET /inbox/narrativa/2473 200 in 20ms (compile: 3ms, render: 17ms)
+ GET /inbox/narrativa/2473 200 in 26ms (compile: 4ms, render: 22ms)
+ GET /login 200 in 13ms (compile: 4ms, render: 10ms)
+ GET / 200 in 10ms (compile: 2ms, render: 8ms)
+ GET /inbox/safin 200 in 12ms (compile: 3ms, render: 9ms)
+ GET /inbox/narrativa/2473 200 in 11ms (compile: 3ms, render: 8ms)
+ GET /inbox/narrativa/2473 200 in 41ms (compile: 14ms, render: 27ms)
+✓ Compiled in 252ms
+ GET /inbox/narrativa/2473 200 in 158ms (compile: 68ms, render: 91ms)
+ GET /inbox/safin 200 in 20ms (compile: 7ms, render: 13ms)
+ GET /inbox/secont 200 in 62ms (compile: 46ms, render: 16ms)
+ GET /revision/sector/I 200 in 294ms (compile: 283ms, render: 10ms)
+ GET /admin/usuarios 200 in 48ms (compile: 33ms, render: 15ms)
+ GET /admin/dependencias 200 in 10ms (compile: 2ms, render: 7ms)
+ GET /admin/configuracion/periodos 200 in 10ms (compile: 2ms, render: 8ms)
+ GET / 200 in 21ms (compile: 6ms, render: 15ms)
+ GET /admin/dashboard 200 in 47ms (compile: 35ms, render: 12ms)
+ GET /captura-estadistica 200 in 11ms (compile: 2ms, render: 8ms)
+ GET /inbox 200 in 13ms (compile: 4ms, render: 9ms)
+ GET /inbox/safin 200 in 11ms (compile: 3ms, render: 8ms)
+ GET /inbox/narrativa/2473 200 in 17ms (compile: 4ms, render: 13ms)
+ GET /revision/sector/I 200 in 14ms (compile: 5ms, render: 9ms)
+ GET /revision/sector/II 200 in 17ms (compile: 7ms, render: 10ms)
+ GET /revision/sector/III 200 in 12ms (compile: 2ms, render: 10ms)
+ GET /admin/usuarios 200 in 13ms (compile: 4ms, render: 9ms)
+ GET /admin/dependencias 200 in 10ms (compile: 3ms, render: 8ms)
+ GET /admin/configuracion/periodos 200 in 13ms (compile: 3ms, render: 9ms)
+ GET /admin/bitacora 200 in 45ms (compile: 32ms, render: 13ms)
+ GET /admin/configuracion 200 in 37ms (compile: 23ms, render: 15ms)
+ GET /admin/catalogos 200 in 32ms (compile: 18ms, render: 13ms)
+ GET /admin/entidades 200 in 67ms (compile: 45ms, render: 22ms)
+ GET /admin/catalogos 200 in 25ms (compile: 8ms, render: 16ms)
+ GET /login 200 in 12ms (compile: 2ms, render: 9ms)
+ GET /login 200 in 8ms (compile: 1311µs, render: 7ms)
+ GET / 200 in 11ms (compile: 3ms, render: 8ms)
+ GET /captura-narrativa 200 in 14ms (compile: 4ms, render: 10ms)
+ GET /captura-estadistica 200 in 14ms (compile: 4ms, render: 10ms)
+ GET /observaciones-secont 200 in 65ms (compile: 54ms, render: 11ms)
+ GET /inbox 200 in 79ms (compile: 16ms, render: 62ms)
+ GET /captura-narrativa 200 in 10ms (compile: 3ms, render: 7ms)
+ GET /captura-narrativa/historial 200 in 13ms (compile: 3ms, render: 10ms)
+ GET / 200 in 15ms (compile: 4ms, render: 11ms)
+ GET /login 200 in 23ms (compile: 6ms, render: 16ms)
+ GET /login 200 in 9ms (compile: 1423µs, render: 7ms)
+ GET / 200 in 12ms (compile: 3ms, render: 9ms)
+ GET /admin/dashboard 200 in 22ms (compile: 6ms, render: 16ms)
+ GET /captura-estadistica 200 in 12ms (compile: 2ms, render: 10ms)
+ GET /inbox 200 in 10ms (compile: 2ms, render: 8ms)
+ GET /inbox/safin 200 in 11ms (compile: 3ms, render: 8ms)
+ GET /inbox/narrativa/2473 200 in 13ms (compile: 4ms, render: 9ms)
+ GET /login 200 in 23ms (compile: 8ms, render: 15ms)
+ GET /login 200 in 9ms (compile: 1389µs, render: 8ms)
+ GET / 200 in 10ms (compile: 3ms, render: 7ms)
+ GET /captura-narrativa/historial 200 in 12ms (compile: 3ms, render: 8ms)
+ GET /captura-narrativa 200 in 10ms (compile: 3ms, render: 7ms)
+ GET /login 200 in 16ms (compile: 4ms, render: 12ms)
+ GET /login 200 in 8ms (compile: 1151µs, render: 7ms)
+ GET / 200 in 12ms (compile: 2ms, render: 9ms)
+ GET / 200 in 43ms (compile: 7ms, render: 36ms)
+ GET /login 200 in 10ms (compile: 3ms, render: 7ms)
+ GET /admin/dashboard 200 in 27ms (compile: 11ms, render: 16ms)
+✓ Compiled in 391ms
+ GET /admin/dashboard 200 in 259ms (compile: 69ms, render: 191ms)
+ GET /admin/dashboard 200 in 19ms (compile: 1500µs, render: 17ms)
+ GET /admin/dashboard 200 in 23ms (compile: 2ms, render: 20ms)
+ GET /login 200 in 26ms (compile: 7ms, render: 19ms)
+ GET / 200 in 10ms (compile: 2ms, render: 7ms)
+ GET /admin/dashboard 200 in 10ms (compile: 1316µs, render: 8ms)
+ GET /captura-estadistica 200 in 19ms (compile: 5ms, render: 14ms)
+ GET /admin/anexo-estadistico/3 200 in 326ms (compile: 311ms, render: 15ms)
+ GET /inbox 200 in 23ms (compile: 8ms, render: 15ms)
+ GET /inbox/safin 200 in 17ms (compile: 8ms, render: 9ms)
+ GET /inbox 200 in 7ms (compile: 1150µs, render: 6ms)
+ GET /inbox/safin 200 in 10ms (compile: 1347µs, render: 8ms)
+ GET /inbox/secont 200 in 13ms (compile: 4ms, render: 10ms)
+ GET /revision/sector/I 200 in 14ms (compile: 6ms, render: 9ms)
+ GET / 200 in 14ms (compile: 4ms, render: 10ms)
+ GET /admin/bitacora 200 in 12ms (compile: 4ms, render: 8ms)
+ GET / 200 in 17ms (compile: 7ms, render: 10ms)
+ GET /admin/usuarios 200 in 14ms (compile: 4ms, render: 11ms)
+ GET / 200 in 12ms (compile: 3ms, render: 8ms)
+ GET /revision/sector/3 200 in 16ms (compile: 5ms, render: 10ms)
+ GET /revision/sector/II 200 in 30ms (compile: 11ms, render: 18ms)
+ GET /revision/sector/I 200 in 15ms (compile: 3ms, render: 12ms)
+ GET / 200 in 12ms (compile: 3ms, render: 9ms)
+ GET /revision/sector/3 200 in 10ms (compile: 2ms, render: 8ms)
+✓ Compiled in 103ms
+ GET / 200 in 170ms (compile: 63ms, render: 107ms)
+ GET /admin/revision/sector/1 404 in 158ms (compile: 148ms, render: 9ms)
+ GET /admin/revision/sector/1 404 in 27ms (compile: 4ms, render: 23ms)
+ GET / 200 in 17ms (compile: 5ms, render: 12ms)
+ GET / 200 in 19ms (compile: 1362µs, render: 18ms)
+ GET /login 200 in 20ms (compile: 2ms, render: 17ms)
+ GET / 200 in 13ms (compile: 3ms, render: 10ms)
+ GET /admin/revision/sector/1 404 in 9ms (compile: 3ms, render: 6ms)
+ GET /admin/revision/sector/1 404 in 19ms (compile: 3ms, render: 16ms)
+ GET / 200 in 7ms (compile: 1220µs, render: 6ms)
+ GET /inbox 200 in 21ms (compile: 7ms, render: 13ms)
+✓ Compiled in 36ms
+ GET /inbox/estadistica/347 200 in 38ms (compile: 19ms, render: 18ms)
+ GET /inbox 200 in 17ms (compile: 4ms, render: 13ms)
+ GET /inbox/estadistica/385 200 in 25ms (compile: 8ms, render: 16ms)
+ GET / 200 in 94ms (compile: 50ms, render: 45ms)
+ GET / 200 in 70ms (compile: 4ms, render: 65ms)
+ GET /revision/sector/1 200 in 17ms (compile: 6ms, render: 11ms)
+ GET /revision/sector/II 200 in 12ms (compile: 3ms, render: 9ms)
+ GET /revision/sector/III 200 in 14ms (compile: 2ms, render: 11ms)
+ GET / 200 in 8ms (compile: 1564µs, render: 6ms)
+ GET /revision/sector/3 200 in 11ms (compile: 2ms, render: 9ms)
+ GET / 200 in 8ms (compile: 1333µs, render: 6ms)
+ GET /revision/sector/3 200 in 11ms (compile: 3ms, render: 8ms)
+ GET /revision/sector/IV 200 in 12ms (compile: 3ms, render: 9ms)
+ GET / 200 in 9ms (compile: 1117µs, render: 8ms)
+✓ Compiled in 122ms
+ GET / 200 in 188ms (compile: 81ms, render: 106ms)
+ GET /revision/sector/I 200 in 14ms (compile: 5ms, render: 9ms)
+ GET /admin/usuarios 200 in 10ms (compile: 2ms, render: 7ms)
+ GET /admin/dependencias 200 in 13ms (compile: 3ms, render: 9ms)
+ GET /admin/configuracion/periodos 200 in 11ms (compile: 4ms, render: 7ms)
+ GET /admin/bitacora 200 in 13ms (compile: 2ms, render: 10ms)
+ GET /admin/configuracion 200 in 12ms (compile: 4ms, render: 8ms)
+ GET /login 200 in 13ms (compile: 3ms, render: 10ms)
+ GET /login 200 in 9ms (compile: 882µs, render: 8ms)
+ GET / 200 in 11ms (compile: 2ms, render: 9ms)
+ GET /captura-narrativa 200 in 13ms (compile: 3ms, render: 10ms)
+ GET /inbox 200 in 38ms (compile: 9ms, render: 30ms)
+ GET /captura-estadistica 200 in 12ms (compile: 3ms, render: 9ms)
+ GET /observaciones-secont 200 in 12ms (compile: 3ms, render: 9ms)
+ GET /captura-narrativa/historial 200 in 12ms (compile: 3ms, render: 9ms)
+ GET /captura-narrativa 200 in 10ms (compile: 3ms, render: 7ms)
+ GET /captura-narrativa/historial 200 in 8ms (compile: 1409µs, render: 7ms)
+ GET /observaciones-secont 200 in 9ms (compile: 1687µs, render: 8ms)
+ GET /captura-estadistica 200 in 9ms (compile: 1739µs, render: 7ms)
+ GET /login 200 in 9ms (compile: 2ms, render: 7ms)
+ GET /login 200 in 7ms (compile: 1180µs, render: 5ms)
+ GET / 200 in 15ms (compile: 4ms, render: 11ms)
+ GET /admin/dashboard 200 in 17ms (compile: 4ms, render: 13ms)
+ GET / 200 in 8ms (compile: 1186µs, render: 7ms)
+ GET /login 200 in 37ms (compile: 9ms, render: 28ms)
+ GET /login 200 in 7ms (compile: 1111µs, render: 6ms)
+ GET / 200 in 13ms (compile: 3ms, render: 10ms)
+ GET /captura-narrativa 200 in 11ms (compile: 3ms, render: 8ms)
+ GET /captura-narrativa 200 in 70ms (compile: 12ms, render: 58ms)
+ GET /captura-narrativa/historial 200 in 40ms (compile: 10ms, render: 30ms)
+✓ Compiled in 129ms
+✓ Compiled in 67ms
+ GET /captura-narrativa/historial 200 in 155ms (compile: 70ms, render: 85ms)
+ GET /captura-narrativa/historial 200 in 51ms (compile: 9ms, render: 42ms)
+ GET /captura-narrativa 200 in 134ms (compile: 108ms, render: 27ms)
+ GET /captura-narrativa 200 in 84ms (compile: 6ms, render: 78ms)
+ GET /captura-narrativa/historial 200 in 12ms (compile: 2ms, render: 10ms)
+ GET /captura-narrativa 200 in 12ms (compile: 3ms, render: 9ms)
+ GET /captura-narrativa/historial 200 in 16ms (compile: 6ms, render: 10ms)
+ GET /login 200 in 27ms (compile: 7ms, render: 20ms)
+ GET /login 200 in 11ms (compile: 2ms, render: 9ms)
+ GET / 200 in 12ms (compile: 3ms, render: 9ms)
+ GET /inbox/safin 200 in 13ms (compile: 4ms, render: 9ms)
+ GET / 200 in 277ms (compile: 88ms, render: 188ms)
+ GET /login 200 in 255ms (compile: 60ms, render: 195ms)
+⚠ Cross origin request detected from 127.0.0.1 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ GET /inbox 200 in 67ms (compile: 29ms, render: 38ms)
+ GET /captura-estadistica 200 in 35ms (compile: 11ms, render: 24ms)
+ GET /inbox 200 in 15ms (compile: 1247µs, render: 13ms)
+ GET /inbox 200 in 117ms (compile: 5ms, render: 112ms)
+ GET /login 200 in 10ms (compile: 2ms, render: 8ms)
+ GET /login 200 in 17ms (compile: 1522µs, render: 16ms)
+ GET / 200 in 121ms (compile: 28ms, render: 93ms)
+ GET /inbox/safin 200 in 20ms (compile: 6ms, render: 13ms)
+ GET /inbox 200 in 83ms (compile: 3ms, render: 80ms)
+✓ Compiled in 709ms
+✓ Compiled in 2ms
+ GET /inbox 200 in 363ms (compile: 191ms, render: 172ms)
+✓ Compiled in 74ms
+⨯ ./frontend/src/app/inbox/page.tsx:37:1
+Module not found: Can't resolve '@/components/ui/use-toast'
+[0m [90m 35 |[39m }
+ [90m 36 |[39m
+[31m[1m>[22m[39m[90m 37 |[39m [36mimport[39m { useToast } [36mfrom[39m [32m"@/components/ui/use-toast"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 38 |[39m
+ [90m 39 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mTrackingInbox[39m() {
+ [90m 40 |[39m     [36mconst[39m { token } [33m=[39m useAuth()[33m;[39m[0m
+
+Import map: aliased to relative './src/components/ui/use-toast' inside of [project]/frontend
+
+
+Import traces:
+  Client Component Browser:
+    ./frontend/src/app/inbox/page.tsx [Client Component Browser]
+    ./frontend/src/app/inbox/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend/src/app/inbox/page.tsx [Client Component SSR]
+    ./frontend/src/app/inbox/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./frontend/src/app/inbox/page.tsx:37:1
+Module not found: Can't resolve '@/components/ui/use-toast'
+[0m [90m 35 |[39m }
+ [90m 36 |[39m
+[31m[1m>[22m[39m[90m 37 |[39m [36mimport[39m { useToast } [36mfrom[39m [32m"@/components/ui/use-toast"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 38 |[39m
+ [90m 39 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mTrackingInbox[39m() {
+ [90m 40 |[39m     [36mconst[39m { token } [33m=[39m useAuth()[33m;[39m[0m
+
+Import map: aliased to relative './src/components/ui/use-toast' inside of [project]/frontend
+
+
+Import traces:
+  Client Component Browser:
+    ./frontend/src/app/inbox/page.tsx [Client Component Browser]
+    ./frontend/src/app/inbox/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend/src/app/inbox/page.tsx [Client Component SSR]
+    ./frontend/src/app/inbox/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./frontend/src/app/inbox/page.tsx:37:1
+Module not found: Can't resolve '@/components/ui/use-toast'
+[0m [90m 35 |[39m }
+ [90m 36 |[39m
+[31m[1m>[22m[39m[90m 37 |[39m [36mimport[39m { useToast } [36mfrom[39m [32m"@/components/ui/use-toast"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 38 |[39m
+ [90m 39 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mTrackingInbox[39m() {
+ [90m 40 |[39m     [36mconst[39m { token } [33m=[39m useAuth()[33m;[39m[0m
+
+Import map: aliased to relative './src/components/ui/use-toast' inside of [project]/frontend
+
+
+Import traces:
+  Client Component Browser:
+    ./frontend/src/app/inbox/page.tsx [Client Component Browser]
+    ./frontend/src/app/inbox/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend/src/app/inbox/page.tsx [Client Component SSR]
+    ./frontend/src/app/inbox/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./frontend/src/app/inbox/page.tsx:37:1
+Module not found: Can't resolve '@/components/ui/use-toast'
+[0m [90m 35 |[39m }
+ [90m 36 |[39m
+[31m[1m>[22m[39m[90m 37 |[39m [36mimport[39m { useToast } [36mfrom[39m [32m"@/components/ui/use-toast"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 38 |[39m
+ [90m 39 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mTrackingInbox[39m() {
+ [90m 40 |[39m     [36mconst[39m { token } [33m=[39m useAuth()[33m;[39m[0m
+
+Import map: aliased to relative './src/components/ui/use-toast' inside of [project]/frontend
+
+
+Import traces:
+  Client Component Browser:
+    ./frontend/src/app/inbox/page.tsx [Client Component Browser]
+    ./frontend/src/app/inbox/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend/src/app/inbox/page.tsx [Client Component SSR]
+    ./frontend/src/app/inbox/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./frontend/src/app/inbox/page.tsx:37:1
+Module not found: Can't resolve '@/components/ui/use-toast'
+[0m [90m 35 |[39m }
+ [90m 36 |[39m
+[31m[1m>[22m[39m[90m 37 |[39m [36mimport[39m { useToast } [36mfrom[39m [32m"@/components/ui/use-toast"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 38 |[39m
+ [90m 39 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mTrackingInbox[39m() {
+ [90m 40 |[39m     [36mconst[39m { token } [33m=[39m useAuth()[33m;[39m[0m
+
+Import map: aliased to relative './src/components/ui/use-toast' inside of [project]/frontend
+
+
+Import traces:
+  Client Component Browser:
+    ./frontend/src/app/inbox/page.tsx [Client Component Browser]
+    ./frontend/src/app/inbox/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend/src/app/inbox/page.tsx [Client Component SSR]
+    ./frontend/src/app/inbox/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./frontend/src/app/inbox/page.tsx:37:1
+Module not found: Can't resolve '@/components/ui/use-toast'
+[0m [90m 35 |[39m }
+ [90m 36 |[39m
+[31m[1m>[22m[39m[90m 37 |[39m [36mimport[39m { useToast } [36mfrom[39m [32m"@/components/ui/use-toast"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 38 |[39m
+ [90m 39 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mTrackingInbox[39m() {
+ [90m 40 |[39m     [36mconst[39m { token } [33m=[39m useAuth()[33m;[39m[0m
+
+Import map: aliased to relative './src/components/ui/use-toast' inside of [project]/frontend
+
+
+Import traces:
+  Client Component Browser:
+    ./frontend/src/app/inbox/page.tsx [Client Component Browser]
+    ./frontend/src/app/inbox/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend/src/app/inbox/page.tsx [Client Component SSR]
+    ./frontend/src/app/inbox/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./frontend/src/app/inbox/page.tsx:37:1
+Module not found: Can't resolve '@/components/ui/use-toast'
+[0m [90m 35 |[39m }
+ [90m 36 |[39m
+[31m[1m>[22m[39m[90m 37 |[39m [36mimport[39m { useToast } [36mfrom[39m [32m"@/components/ui/use-toast"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 38 |[39m
+ [90m 39 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mTrackingInbox[39m() {
+ [90m 40 |[39m     [36mconst[39m { token } [33m=[39m useAuth()[33m;[39m[0m
+
+Import map: aliased to relative './src/components/ui/use-toast' inside of [project]/frontend
+
+
+Import traces:
+  Client Component Browser:
+    ./frontend/src/app/inbox/page.tsx [Client Component Browser]
+    ./frontend/src/app/inbox/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend/src/app/inbox/page.tsx [Client Component SSR]
+    ./frontend/src/app/inbox/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./frontend/src/app/inbox/page.tsx:37:1
+Module not found: Can't resolve '@/components/ui/use-toast'
+[0m [90m 35 |[39m }
+ [90m 36 |[39m
+[31m[1m>[22m[39m[90m 37 |[39m [36mimport[39m { useToast } [36mfrom[39m [32m"@/components/ui/use-toast"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 38 |[39m
+ [90m 39 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mTrackingInbox[39m() {
+ [90m 40 |[39m     [36mconst[39m { token } [33m=[39m useAuth()[33m;[39m[0m
+
+Import map: aliased to relative './src/components/ui/use-toast' inside of [project]/frontend
+
+
+Import traces:
+  Client Component Browser:
+    ./frontend/src/app/inbox/page.tsx [Client Component Browser]
+    ./frontend/src/app/inbox/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend/src/app/inbox/page.tsx [Client Component SSR]
+    ./frontend/src/app/inbox/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./frontend/src/app/inbox/page.tsx:37:1
+Module not found: Can't resolve '@/components/ui/use-toast'
+[0m [90m 35 |[39m }
+ [90m 36 |[39m
+[31m[1m>[22m[39m[90m 37 |[39m [36mimport[39m { useToast } [36mfrom[39m [32m"@/components/ui/use-toast"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 38 |[39m
+ [90m 39 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mTrackingInbox[39m() {
+ [90m 40 |[39m     [36mconst[39m { token } [33m=[39m useAuth()[33m;[39m[0m
+
+Import map: aliased to relative './src/components/ui/use-toast' inside of [project]/frontend
+
+
+Import traces:
+  Client Component Browser:
+    ./frontend/src/app/inbox/page.tsx [Client Component Browser]
+    ./frontend/src/app/inbox/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend/src/app/inbox/page.tsx [Client Component SSR]
+    ./frontend/src/app/inbox/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./frontend/src/app/inbox/page.tsx:37:1
+Module not found: Can't resolve '@/components/ui/use-toast'
+[0m [90m 35 |[39m }
+ [90m 36 |[39m
+[31m[1m>[22m[39m[90m 37 |[39m [36mimport[39m { useToast } [36mfrom[39m [32m"@/components/ui/use-toast"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 38 |[39m
+ [90m 39 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mTrackingInbox[39m() {
+ [90m 40 |[39m     [36mconst[39m { token } [33m=[39m useAuth()[33m;[39m[0m
+
+Import map: aliased to relative './src/components/ui/use-toast' inside of [project]/frontend
+
+
+Import traces:
+  Client Component Browser:
+    ./frontend/src/app/inbox/page.tsx [Client Component Browser]
+    ./frontend/src/app/inbox/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend/src/app/inbox/page.tsx [Client Component SSR]
+    ./frontend/src/app/inbox/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./frontend/src/app/inbox/page.tsx:37:1
+Module not found: Can't resolve '@/components/ui/use-toast'
+[0m [90m 35 |[39m }
+ [90m 36 |[39m
+[31m[1m>[22m[39m[90m 37 |[39m [36mimport[39m { useToast } [36mfrom[39m [32m"@/components/ui/use-toast"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 38 |[39m
+ [90m 39 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mTrackingInbox[39m() {
+ [90m 40 |[39m     [36mconst[39m { token } [33m=[39m useAuth()[33m;[39m[0m
+
+Import map: aliased to relative './src/components/ui/use-toast' inside of [project]/frontend
+
+
+Import traces:
+  Client Component Browser:
+    ./frontend/src/app/inbox/page.tsx [Client Component Browser]
+    ./frontend/src/app/inbox/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend/src/app/inbox/page.tsx [Client Component SSR]
+    ./frontend/src/app/inbox/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./frontend/src/app/inbox/page.tsx:37:1
+Module not found: Can't resolve '@/components/ui/use-toast'
+[0m [90m 35 |[39m }
+ [90m 36 |[39m
+[31m[1m>[22m[39m[90m 37 |[39m [36mimport[39m { useToast } [36mfrom[39m [32m"@/components/ui/use-toast"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 38 |[39m
+ [90m 39 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mTrackingInbox[39m() {
+ [90m 40 |[39m     [36mconst[39m { token } [33m=[39m useAuth()[33m;[39m[0m
+
+Import map: aliased to relative './src/components/ui/use-toast' inside of [project]/frontend
+
+
+Import traces:
+  Client Component Browser:
+    ./frontend/src/app/inbox/page.tsx [Client Component Browser]
+    ./frontend/src/app/inbox/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend/src/app/inbox/page.tsx [Client Component SSR]
+    ./frontend/src/app/inbox/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+✓ Compiled in 131ms
+✓ Compiled in 37ms
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET /login 200 in 768ms (compile: 19ms, render: 749ms)
+ GET /login 200 in 556ms (compile: 18ms, render: 538ms)
+ GET /login 200 in 558ms (compile: 60ms, render: 499ms)
+ GET /inbox 200 in 495ms (compile: 276ms, render: 219ms)
+✓ Compiled in 136ms
+ GET /inbox 200 in 183ms (compile: 86ms, render: 96ms)
+ GET /inbox 200 in 17ms (compile: 2ms, render: 15ms)
+ GET /inbox 200 in 19ms (compile: 3ms, render: 16ms)
+ GET /login 200 in 12ms (compile: 3ms, render: 8ms)
+ GET /login 200 in 8ms (compile: 1153µs, render: 7ms)
+ GET / 200 in 24ms (compile: 5ms, render: 19ms)
+ GET /inbox 200 in 11ms (compile: 1967µs, render: 9ms)
+ GET / 200 in 11ms (compile: 1822µs, render: 9ms)
+ GET /captura-estadistica 200 in 29ms (compile: 20ms, render: 8ms)
+ GET /observaciones-secont 200 in 18ms (compile: 7ms, render: 11ms)
+ GET /captura-narrativa/historial 200 in 18ms (compile: 6ms, render: 12ms)
+ GET /captura-narrativa/historial 200 in 17ms (compile: 1289µs, render: 15ms)
+ GET /captura-narrativa 200 in 23ms (compile: 8ms, render: 15ms)
+ GET /captura-narrativa 200 in 48ms (compile: 12ms, render: 36ms)
+ GET /captura-narrativa/historial 200 in 17ms (compile: 4ms, render: 13ms)
+ GET /login 200 in 14ms (compile: 5ms, render: 9ms)
+ GET /login 200 in 9ms (compile: 1836µs, render: 7ms)
+ GET / 200 in 12ms (compile: 3ms, render: 9ms)
+ GET /inbox/safin 200 in 14ms (compile: 4ms, render: 9ms)
+ GET /inbox 200 in 13ms (compile: 4ms, render: 8ms)
+ GET /inbox/safin 200 in 12ms (compile: 3ms, render: 9ms)
+ GET /inbox 200 in 9ms (compile: 2ms, render: 7ms)
+✓ Compiled in 117ms
+ GET /inbox 200 in 219ms (compile: 82ms, render: 137ms)
+ GET /login 200 in 73ms (compile: 44ms, render: 29ms)
+ GET /login 200 in 10ms (compile: 1333µs, render: 9ms)
+ GET /login 200 in 52ms (compile: 1398µs, render: 50ms)
+ GET / 200 in 123ms (compile: 69ms, render: 54ms)
+ GET /inbox/safin 200 in 72ms (compile: 49ms, render: 23ms)
+ GET /inbox/secont 200 in 78ms (compile: 57ms, render: 21ms)
+ GET /login 200 in 10ms (compile: 3ms, render: 7ms)
+ GET /login 200 in 7ms (compile: 927µs, render: 6ms)
+ GET / 200 in 17ms (compile: 2ms, render: 15ms)
+ GET /inbox 200 in 11ms (compile: 3ms, render: 8ms)
+ GET /login 200 in 12ms (compile: 1074µs, render: 11ms)
+ GET / 200 in 40ms (compile: 12ms, render: 28ms)
+ GET / 200 in 11ms (compile: 1575µs, render: 9ms)
+ GET /inbox 200 in 10ms (compile: 3ms, render: 8ms)
+ GET /inbox 200 in 33ms (compile: 1418µs, render: 32ms)
+ GET /captura-narrativa/historial 200 in 81ms (compile: 58ms, render: 23ms)
+ GET /inbox 200 in 8ms (compile: 1858µs, render: 6ms)
+✓ Compiled in 71ms
+✓ Compiled in 110ms
+ GET /inbox 200 in 219ms (compile: 122ms, render: 97ms)
+ GET /inbox/narrativa/2476 200 in 99ms (compile: 68ms, render: 30ms)
+ GET /login 200 in 119ms (compile: 88ms, render: 31ms)
+ GET /login 200 in 11ms (compile: 1348µs, render: 9ms)
+ GET / 200 in 92ms (compile: 59ms, render: 33ms)
+ GET /inbox/safin 200 in 61ms (compile: 40ms, render: 21ms)
+ GET /inbox/narrativa/2476 200 in 11ms (compile: 4ms, render: 7ms)
+ GET /inbox/narrativa/2476 200 in 125ms (compile: 20ms, render: 105ms)
+ GET /inbox/safin 200 in 17ms (compile: 4ms, render: 13ms)
+ GET /inbox/narrativa/2476 200 in 11ms (compile: 3ms, render: 8ms)
+ GET /inbox/narrativa/2476 200 in 48ms (compile: 10ms, render: 37ms)
+ GET /login 200 in 13ms (compile: 3ms, render: 10ms)
+ GET /login 200 in 9ms (compile: 1371µs, render: 8ms)
+ GET / 200 in 18ms (compile: 6ms, render: 12ms)
+ GET /inbox/safin 200 in 14ms (compile: 3ms, render: 10ms)
+ GET /inbox/narrativa/2476 200 in 13ms (compile: 4ms, render: 9ms)
+ GET /login 200 in 11ms (compile: 3ms, render: 8ms)
+ GET /login 200 in 8ms (compile: 1072µs, render: 7ms)
+ GET / 200 in 12ms (compile: 3ms, render: 9ms)
+ GET /captura-narrativa/historial 200 in 83ms (compile: 58ms, render: 25ms)
+ GET /login 200 in 16ms (compile: 4ms, render: 12ms)
+ GET /login 200 in 8ms (compile: 1067µs, render: 7ms)
+ GET / 200 in 18ms (compile: 5ms, render: 12ms)
+ GET /inbox/safin 200 in 11ms (compile: 3ms, render: 8ms)
+ GET /inbox/narrativa/2476 200 in 15ms (compile: 4ms, render: 11ms)
+ GET /inbox/narrativa/2474 200 in 42ms (compile: 9ms, render: 33ms)
+ GET /inbox/narrativa/2474 200 in 39ms (compile: 8ms, render: 30ms)
+ GET /inbox/safin 200 in 13ms (compile: 3ms, render: 9ms)
+ GET /inbox/narrativa/2476 200 in 15ms (compile: 5ms, render: 10ms)
+ GET /inbox/safin 200 in 80ms (compile: 6ms, render: 74ms)
+ GET /login 200 in 40ms (compile: 4ms, render: 35ms)
+ GET /login 200 in 9ms (compile: 1672µs, render: 7ms)
+ GET / 200 in 14ms (compile: 4ms, render: 9ms)
+ GET /inbox/safin 200 in 14ms (compile: 3ms, render: 11ms)
+ GET /inbox/narrativa/2476 200 in 17ms (compile: 6ms, render: 11ms)
+ GET /inbox/safin 200 in 16ms (compile: 3ms, render: 13ms)
+ GET /inbox/narrativa/2473 200 in 13ms (compile: 3ms, render: 10ms)
+ GET /inbox/narrativa/2473 200 in 55ms (compile: 26ms, render: 29ms)
+ GET /inbox/safin 200 in 12ms (compile: 3ms, render: 9ms)
+ GET /inbox/secont 200 in 86ms (compile: 61ms, render: 26ms)
+ GET /inbox/safin 200 in 9ms (compile: 1848µs, render: 7ms)
+ GET /captura-estadistica 200 in 130ms (compile: 92ms, render: 38ms)
+ GET /inbox/safin 200 in 16ms (compile: 4ms, render: 12ms)
+ GET /inbox/secont 200 in 14ms (compile: 4ms, render: 10ms)
+ GET /revision/sector/I 200 in 130ms (compile: 103ms, render: 27ms)
+ GET /revision/sector/II 200 in 17ms (compile: 4ms, render: 13ms)
+ GET /admin/dependencias 200 in 102ms (compile: 72ms, render: 30ms)
+ GET /admin/configuracion/periodos 200 in 132ms (compile: 99ms, render: 34ms)
+ GET /admin/bitacora 200 in 81ms (compile: 57ms, render: 24ms)
+ GET /admin/configuracion 200 in 75ms (compile: 55ms, render: 20ms)
+ GET /admin/catalogos 200 in 89ms (compile: 45ms, render: 44ms)
+ GET /admin/entidades 200 in 101ms (compile: 78ms, render: 23ms)
+ GET /inbox/safin 200 in 16ms (compile: 4ms, render: 12ms)
+ GET /inbox/safin 200 in 108ms (compile: 25ms, render: 83ms)
+ GET /inbox/secont 200 in 28ms (compile: 7ms, render: 21ms)
+ GET /inbox/safin 200 in 14ms (compile: 3ms, render: 11ms)
+ GET /login 200 in 29ms (compile: 7ms, render: 22ms)
+ GET /login 200 in 11ms (compile: 1838µs, render: 9ms)
+ GET / 200 in 39ms (compile: 13ms, render: 26ms)
+ GET /captura-narrativa 200 in 419ms (compile: 371ms, render: 48ms)
+ GET /captura-narrativa 200 in 92ms (compile: 28ms, render: 64ms)
+✓ Compiled in 339ms
+✓ Compiled in 104ms
+✓ Compiled in 83ms
+ GET /login 200 in 461ms (compile: 37ms, render: 424ms)
+ GET /captura-narrativa 200 in 446ms (compile: 335ms, render: 110ms)
+ GET /login 200 in 51ms (compile: 16ms, render: 35ms)
+ GET /login 200 in 43ms (compile: 25ms, render: 18ms)
+ GET /captura-narrativa 200 in 367ms (compile: 9ms, render: 358ms)
+✓ Compiled in 277ms
+ GET /captura-narrativa 200 in 252ms (compile: 127ms, render: 124ms)
+✓ Compiled in 72ms
+✓ Compiled in 126ms
+ GET /captura-narrativa 200 in 232ms (compile: 107ms, render: 125ms)
+✓ Compiled in 161ms
+ GET /captura-narrativa 200 in 193ms (compile: 80ms, render: 113ms)
+ GET /captura-narrativa 200 in 62ms (compile: 19ms, render: 43ms)
+ GET /captura-narrativa 200 in 20ms (compile: 2ms, render: 18ms)
+✓ Compiled in 123ms
+✓ Compiled in 63ms
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET /captura-narrativa 200 in 447ms (compile: 262ms, render: 185ms)
+✓ Compiled in 55ms
+ GET /captura-narrativa 200 in 214ms (compile: 78ms, render: 136ms)
+ GET /captura-narrativa 200 in 50ms (compile: 7ms, render: 43ms)
+ GET /captura-narrativa 200 in 33ms (compile: 3ms, render: 30ms)
+ GET /captura-narrativa 200 in 57ms (compile: 12ms, render: 45ms)
+ GET /captura-narrativa 200 in 28ms (compile: 4ms, render: 24ms)
+ GET /login 200 in 17ms (compile: 5ms, render: 12ms)
+ GET /login 200 in 10ms (compile: 1643µs, render: 8ms)
+ GET / 200 in 51ms (compile: 16ms, render: 35ms)
+ GET /captura-narrativa 200 in 22ms (compile: 4ms, render: 18ms)
+✓ Compiled in 85ms
+✓ Compiled in 63ms
+ GET /captura-narrativa 200 in 210ms (compile: 96ms, render: 113ms)
+ GET /captura-narrativa 200 in 43ms (compile: 10ms, render: 32ms)
+ GET /captura-narrativa 200 in 97ms (compile: 30ms, render: 67ms)
+ GET /login 200 in 18ms (compile: 2ms, render: 16ms)
+ GET /login 200 in 11ms (compile: 1534µs, render: 9ms)
+ GET / 200 in 67ms (compile: 20ms, render: 48ms)
+ GET /captura-narrativa 200 in 26ms (compile: 3ms, render: 24ms)
+ GET /captura-narrativa 200 in 48ms (compile: 17ms, render: 30ms)
+ GET /captura-narrativa 200 in 65ms (compile: 25ms, render: 41ms)
+ GET /captura-narrativa 200 in 17ms (compile: 1309µs, render: 16ms)
+ GET /login 200 in 52ms (compile: 9ms, render: 43ms)
+ GET /login 200 in 10ms (compile: 1312µs, render: 8ms)
+ GET / 200 in 15ms (compile: 3ms, render: 12ms)
+ GET /captura-narrativa 200 in 41ms (compile: 3ms, render: 38ms)
+ GET / 200 in 85ms (compile: 16ms, render: 69ms)
+ GET /login 200 in 30ms (compile: 9ms, render: 22ms)
+ GET / 200 in 78ms (compile: 15ms, render: 63ms)
+ GET /observaciones-secont 200 in 190ms (compile: 155ms, render: 35ms)
+ GET / 200 in 12ms (compile: 1993µs, render: 10ms)
+ GET /captura-narrativa 200 in 16ms (compile: 6ms, render: 10ms)
+ GET /captura-narrativa 200 in 42ms (compile: 7ms, render: 35ms)
+ GET /captura-narrativa/historial 200 in 21ms (compile: 5ms, render: 16ms)
+✓ Compiled in 169ms
+ GET /captura-narrativa/historial 200 in 110ms (compile: 10ms, render: 100ms)
+ GET /captura-narrativa?id=2479 200 in 109ms (compile: 81ms, render: 28ms)
+ GET / 200 in 87ms (compile: 18ms, render: 69ms)
+ GET /captura-narrativa/historial 200 in 17ms (compile: 5ms, render: 11ms)
+ GET /captura-narrativa/historial 200 in 56ms (compile: 8ms, render: 48ms)
+ GET /captura-narrativa?id=2479 200 in 19ms (compile: 3ms, render: 16ms)
+ GET /captura-estadistica 200 in 69ms (compile: 29ms, render: 39ms)
+ GET /inbox 200 in 65ms (compile: 40ms, render: 25ms)
+ GET /inbox/estadistica/389 200 in 67ms (compile: 21ms, render: 46ms)
+ GET /captura-estadistica 200 in 18ms (compile: 4ms, render: 14ms)
+ GET /captura-estadistica 200 in 157ms (compile: 10ms, render: 148ms)
+ GET /login 200 in 68ms (compile: 9ms, render: 59ms)
+ GET /login 200 in 18ms (compile: 1607µs, render: 16ms)
+ GET /captura-estadistica 200 in 78ms (compile: 10ms, render: 68ms)
+ GET / 200 in 44ms (compile: 10ms, render: 34ms)
+ GET /captura-estadistica 200 in 17ms (compile: 5ms, render: 12ms)

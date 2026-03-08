@@ -1,0 +1,67 @@
+{
+    "project": "SEPLAN V2 - Sistema de Captura de Informe",
+    "currentVersion": "2.2.1",
+    "history": [
+        {
+            "version": "2.2.1",
+            "date": "2026-03-02",
+            "title": "Inicialización de nuevo repositorio y salto a versión 2.2.1",
+            "changes": [
+                "Reinicio del repositorio Git para eliminar historial previo.",
+                "Actualización de versión base a 2.2.1 para llevar nuevo control."
+            ]
+        },
+        {
+            "version": "0.2.1",
+            "date": "2026-03-01",
+            "title": "Corrección de Exportaciones Multihoja (Multi-Sheet)",
+            "changes": [
+                "El Anexo Estadístico Consolidado ahora genera un libro inteligente con múltiples pestañas (una por Entidad).",
+                "Resolución de desfases de columnas e 'Invalid Date' en extracciones históricas.",
+                "Remoción del placeholder 'Avance estratégico consolidado' en el motor docx."
+            ]
+        },
+        {
+            "version": "0.2.0",
+            "date": "2026-03-01",
+            "title": "Flujos de Estado y Aislamiento Histórico",
+            "changes": [
+                "Aislamiento de año 2025 para consulta inmutable como archivo histórico en Dashboard e Inbox.",
+                "Nuevo flujo de estados: Borrador, En Validación, Aprobado y Observado.",
+                "Capacidad de edición y corrección de observaciones del Validador.",
+                "Generación contextual de anexos Excel y Word según el periodo seleccionado."
+            ]
+        },
+        {
+            "version": "0.1.5",
+            "date": "2026-03-01",
+            "title": "Optimización de Dashboard y Escala",
+            "changes": [
+                "Nueva Vista de Lista para 40+ dependencias en Revisión Sectorial.",
+                "Implementación de Paginación y Filtros en el Feed de Actividades.",
+                "Integración del Asistente IA V2 con análisis proactivo.",
+                "Reubicación táctica de la consola de IA al panel lateral."
+            ]
+        },
+        {
+            "version": "0.1.4",
+            "date": "2026-02-28",
+            "title": "Configuración de Entorno y Seguridad",
+            "changes": [
+                "Configuración de entorno de pruebas con Fail-Safe Mode.",
+                "Implementación de roles: SuperAdmin, Admin, Capturista, Validador.",
+                "Sistema de autenticación con persistencia en LocalStorage."
+            ]
+        },
+        {
+            "version": "0.1.0",
+            "date": "2026-02-25",
+            "title": "Lanzamiento Inicial (MVP)",
+            "changes": [
+                "Módulos base de Captura Narrativa y Estadística.",
+                "Motor de generación de documentos Word y Excel.",
+                "Dashboard ejecutivo con métricas globales."
+            ]
+        }
+    ]
+}

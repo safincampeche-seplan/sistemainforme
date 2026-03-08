@@ -1,0 +1,44 @@
+[2026-03-08T15:36:50.803Z] POST /api/narratives/2483/submit called by saluddemo@seplan.gob.mx
+[2026-03-08T15:36:50.843Z] SQL: 
+            SELECT DISTINCT u.id, u.email 
+            FROM users u
+            JOIN model_has_roles mhr ON mhr.model_id = u.id
+            JOIN roles r ON r.id = mhr.role_id
+            WHERE LOWER(r.name) IN ('safin','admin','super_admin','superadministrador')
+            
+        
+[2026-03-08T15:36:50.848Z] Users found: 2
+[2026-03-08T15:36:50.848Z] Inserting notification for user 1 with UUID dcc60d0d-deee-49a4-b52f-8c0bfb2376b8
+[2026-03-08T15:36:50.856Z] Inserting notification for user 103 with UUID 7a208e87-561c-495f-915c-2e6e83a0be54
+[2026-03-08T15:37:40.634Z] SQL: 
+            SELECT DISTINCT u.id, u.email 
+            FROM users u
+            JOIN model_has_roles mhr ON mhr.model_id = u.id
+            JOIN roles r ON r.id = mhr.role_id
+            WHERE LOWER(r.name) IN ('capturista')
+            AND u.dependency_id = 15
+        
+[2026-03-08T15:37:40.636Z] Users found: 1
+[2026-03-08T15:37:40.637Z] Inserting notification for user 156 with UUID cd950810-c22e-40a8-8133-0fe07c15fe55
+[2026-03-08T15:43:40.861Z] SQL: 
+            SELECT DISTINCT u.id, u.email 
+            FROM users u
+            JOIN model_has_roles mhr ON mhr.model_id = u.id
+            JOIN roles r ON r.id = mhr.role_id
+            WHERE LOWER(r.name) IN ('secont','validador','admin','super_admin','superadministrador')
+            
+        
+[2026-03-08T15:43:40.869Z] Users found: 3
+[2026-03-08T15:43:40.869Z] Inserting notification for user 1 with UUID 0da5b50b-8bd1-4586-9329-65f7d9e53e46
+[2026-03-08T15:43:40.876Z] Inserting notification for user 103 with UUID ad25c72c-0fc6-4e9a-aedc-1477179444ab
+[2026-03-08T15:43:40.878Z] Inserting notification for user 157 with UUID 0ef8b375-3151-4f99-955a-cb4cb7bedef7
+[2026-03-08T15:44:02.808Z] SQL: 
+            SELECT DISTINCT u.id, u.email 
+            FROM users u
+            JOIN model_has_roles mhr ON mhr.model_id = u.id
+            JOIN roles r ON r.id = mhr.role_id
+            WHERE LOWER(r.name) IN ('capturista')
+            AND u.dependency_id = 15
+        
+[2026-03-08T15:44:02.813Z] Users found: 1
+[2026-03-08T15:44:02.813Z] Inserting notification for user 156 with UUID 20e4fcf6-1def-4f71-b2b2-e83fdd4b707b
