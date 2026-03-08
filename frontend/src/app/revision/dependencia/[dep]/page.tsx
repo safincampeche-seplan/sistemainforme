@@ -45,7 +45,7 @@ export default function DependencyRevision() {
         const fetchDepData = async () => {
             if (!token) return;
             try {
-                const baseUrl = typeof window !== 'undefined' ? `${window.location.protocol}//${window.location.hostname}:3001` : 'http://localhost:3001';
+                const baseUrl = process.env.NEXT_PUBLIC_API_URL ? process.env.NEXT_PUBLIC_API_URL.replace(/\/api\/?$/, '') : (typeof window !== 'undefined' ? `${window.location.protocol}//${window.location.hostname}:3001` : 'http://localhost:3001');
 
                 // 1. Obtener nombre de la dependencia
                 const depsRes = await fetch(`${baseUrl}/api/catalogs/dependencies`, {

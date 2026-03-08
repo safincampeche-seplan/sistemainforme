@@ -113,7 +113,7 @@ function CapturaNarrativaContent() {
 
     useEffect(() => {
         const fetchCatalogs = async () => {
-            const baseUrl = typeof window !== 'undefined' ? `${window.location.protocol}//${window.location.hostname}:3001` : 'http://localhost:3001';
+            const baseUrl = process.env.NEXT_PUBLIC_API_URL ? process.env.NEXT_PUBLIC_API_URL.replace(/\/api\/?$/, '') : (typeof window !== 'undefined' ? `${window.location.protocol}//${window.location.hostname}:3001` : 'http://localhost:3001');
             const headers = { "Authorization": `Bearer ${token}` };
             const query = `?periodo=${selectedPeriod}`;
             try {
@@ -214,7 +214,7 @@ function CapturaNarrativaContent() {
         if (!token || !editId) return;
         const fetchExisting = async () => {
             try {
-                const baseUrl = typeof window !== 'undefined' ? `${window.location.protocol}//${window.location.hostname}:3001` : 'http://localhost:3001';
+                const baseUrl = process.env.NEXT_PUBLIC_API_URL ? process.env.NEXT_PUBLIC_API_URL.replace(/\/api\/?$/, '') : (typeof window !== 'undefined' ? `${window.location.protocol}//${window.location.hostname}:3001` : 'http://localhost:3001');
                 const headers = { "Authorization": `Bearer ${token}` };
                 const res = await fetch(`${baseUrl}/api/tracking/narrativa/${editId}?periodo=${selectedPeriod}`, { headers });
                 if (res.ok) {
@@ -300,7 +300,7 @@ function CapturaNarrativaContent() {
     const handleInputChange = async (field: string, value: any) => {
         setFormData(prev => ({ ...prev, [field]: value }));
 
-        const baseUrl = typeof window !== 'undefined' ? `${window.location.protocol}//${window.location.hostname}:3001` : 'http://localhost:3001';
+        const baseUrl = process.env.NEXT_PUBLIC_API_URL ? process.env.NEXT_PUBLIC_API_URL.replace(/\/api\/?$/, '') : (typeof window !== 'undefined' ? `${window.location.protocol}//${window.location.hostname}:3001` : 'http://localhost:3001');
         const headers = { "Authorization": `Bearer ${token}` };
         const query = `?periodo=${selectedPeriod}`;
 
@@ -420,7 +420,7 @@ function CapturaNarrativaContent() {
         if (!formData.narrative_breakdown || formData.narrative_breakdown.length < 10) return;
         setAiLoading(true);
         try {
-            const baseUrl = typeof window !== 'undefined' ? `${window.location.protocol}//${window.location.hostname}:3001` : 'http://localhost:3001';
+            const baseUrl = process.env.NEXT_PUBLIC_API_URL ? process.env.NEXT_PUBLIC_API_URL.replace(/\/api\/?$/, '') : (typeof window !== 'undefined' ? `${window.location.protocol}//${window.location.hostname}:3001` : 'http://localhost:3001');
             const res = await fetch(`${baseUrl}/api/ai/optimize`, {
                 method: "POST",
                 headers: {
@@ -443,7 +443,7 @@ function CapturaNarrativaContent() {
 
     // Shared function to load PPA suggestions for the current classification
     const loadSuggestions = async (sessionExclusions: string[] = []) => {
-        const baseUrl = typeof window !== 'undefined' ? `${window.location.protocol}//${window.location.hostname}:3001` : 'http://localhost:3001';
+        const baseUrl = process.env.NEXT_PUBLIC_API_URL ? process.env.NEXT_PUBLIC_API_URL.replace(/\/api\/?$/, '') : (typeof window !== 'undefined' ? `${window.location.protocol}//${window.location.hostname}:3001` : 'http://localhost:3001');
         const headers = { "Authorization": `Bearer ${token}` };
 
         const selectedTitle = catalogs.titles.find((t: any) => t.id?.toString() === formData.title_id);
@@ -496,7 +496,7 @@ function CapturaNarrativaContent() {
                 return;
             }
 
-            const baseUrl = typeof window !== 'undefined' ? `${window.location.protocol}//${window.location.hostname}:3001` : 'http://localhost:3001';
+            const baseUrl = process.env.NEXT_PUBLIC_API_URL ? process.env.NEXT_PUBLIC_API_URL.replace(/\/api\/?$/, '') : (typeof window !== 'undefined' ? `${window.location.protocol}//${window.location.hostname}:3001` : 'http://localhost:3001');
             const headers = { "Content-Type": "application/json", "Authorization": `Bearer ${token}` };
 
             // First pass: Save as Draft
@@ -606,7 +606,7 @@ function CapturaNarrativaContent() {
                                 <Button
                                     key={id}
                                     onClick={() => {
-                                        const baseUrl = typeof window !== 'undefined' ? `${window.location.protocol}//${window.location.hostname}:3001` : 'http://localhost:3001';
+                                        const baseUrl = process.env.NEXT_PUBLIC_API_URL ? process.env.NEXT_PUBLIC_API_URL.replace(/\/api\/?$/, '') : (typeof window !== 'undefined' ? `${window.location.protocol}//${window.location.hostname}:3001` : 'http://localhost:3001');
                                         window.open(`${baseUrl}/api/export/word/narrative/${id}?token=${token}`, '_blank');
                                     }}
                                     variant="outline"

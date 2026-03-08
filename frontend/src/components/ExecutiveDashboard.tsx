@@ -38,7 +38,7 @@ export function ExecutiveDashboard() {
     const [loading, setLoading] = useState(true);
     const [view, setView] = useState<'narrativas' | 'anexos'>('narrativas');
 
-    const baseUrl = typeof window !== 'undefined' ? `${window.location.protocol}//${window.location.hostname}:3001` : 'http://localhost:3001';
+    const baseUrl = process.env.NEXT_PUBLIC_API_URL ? process.env.NEXT_PUBLIC_API_URL.replace(/\/api\/?$/, '') : (typeof window !== 'undefined' ? `${window.location.protocol}//${window.location.hostname}:3001` : 'http://localhost:3001');
 
     const fetchData = async () => {
         setLoading(true);

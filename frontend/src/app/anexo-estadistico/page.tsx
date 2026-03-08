@@ -36,7 +36,7 @@ export default function AnexoEstadistico() {
 
         async function fetchTables() {
             try {
-                const baseUrl = typeof window !== 'undefined' ? `${window.location.protocol}//${window.location.hostname}:3001` : 'http://localhost:3001';
+                const baseUrl = process.env.NEXT_PUBLIC_API_URL ? process.env.NEXT_PUBLIC_API_URL.replace(/\/api\/?$/, '') : (typeof window !== 'undefined' ? `${window.location.protocol}//${window.location.hostname}:3001` : 'http://localhost:3001');
                 const res = await fetch(`${baseUrl}/api/entities`, {
                     headers: { 'Authorization': `Bearer ${token}` }
                 });

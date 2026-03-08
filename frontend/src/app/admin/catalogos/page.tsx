@@ -121,7 +121,7 @@ export default function CatalogosPage() {
     useEffect(() => {
         const fetchCatalogs = async () => {
             try {
-                const res = await fetch('http://localhost:3001/api/admin/catalogs-list', {
+                const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api'}/admin/catalogs-list`, {
                     headers: { 'Authorization': `Bearer ${token}` }
                 });
                 if (res.ok) {

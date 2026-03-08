@@ -30,7 +30,7 @@ export default function HistorialCapturas() {
         if (!token) return;
         const fetchData = async () => {
             try {
-                const baseUrl = typeof window !== 'undefined' ? `${window.location.protocol}//${window.location.hostname}:3001` : 'http://localhost:3001';
+                const baseUrl = process.env.NEXT_PUBLIC_API_URL ? process.env.NEXT_PUBLIC_API_URL.replace(/\/api\/?$/, '') : (typeof window !== 'undefined' ? `${window.location.protocol}//${window.location.hostname}:3001` : 'http://localhost:3001');
                 const res = await fetch(`${baseUrl}/api/narratives/my-captures?periodo=${selectedPeriod}`, {
                     headers: { 'Authorization': `Bearer ${token}` }
                 });
@@ -48,7 +48,7 @@ export default function HistorialCapturas() {
     }, [token, selectedPeriod]);
 
     const handleExportWord = (id: string) => {
-        const baseUrl = typeof window !== 'undefined' ? `${window.location.protocol}//${window.location.hostname}:3001` : 'http://localhost:3001';
+        const baseUrl = process.env.NEXT_PUBLIC_API_URL ? process.env.NEXT_PUBLIC_API_URL.replace(/\/api\/?$/, '') : (typeof window !== 'undefined' ? `${window.location.protocol}//${window.location.hostname}:3001` : 'http://localhost:3001');
         window.open(`${baseUrl}/api/export/word/narrative/${id}?token=${token}`, '_blank');
     };
 

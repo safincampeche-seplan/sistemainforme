@@ -20,7 +20,7 @@ export default function CorteManager() {
     const fetchStatus = async () => {
         try {
             const token = localStorage.getItem('token');
-            const res = await fetch('http://localhost:3001/api/admin/corte-status', {
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api'}/admin/corte-status`, {
                 headers: { 'Authorization': `Bearer ${token}` }
             });
             if (res.ok) {
@@ -42,7 +42,7 @@ export default function CorteManager() {
         setTriggering(true);
         try {
             const token = localStorage.getItem('token');
-            const res = await fetch('http://localhost:3001/api/admin/trigger-second-corte', {
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api'}/admin/trigger-second-corte`, {
                 method: 'POST',
                 headers: { 'Authorization': `Bearer ${token}` }
             });

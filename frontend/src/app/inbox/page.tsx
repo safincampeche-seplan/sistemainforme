@@ -57,7 +57,7 @@ export default function TrackingInbox() {
         if (!token) return;
         setLoading(true);
         try {
-            const baseUrl = typeof window !== 'undefined' ? `${window.location.protocol}//${window.location.hostname}:3001` : 'http://localhost:3001';
+            const baseUrl = process.env.NEXT_PUBLIC_API_URL ? process.env.NEXT_PUBLIC_API_URL.replace(/\/api\/?$/, '') : (typeof window !== 'undefined' ? `${window.location.protocol}//${window.location.hostname}:3001` : 'http://localhost:3001');
             const res = await fetch(`${baseUrl}/api/tracking/all`, {
                 headers: { "Authorization": `Bearer ${token}` }
             });
@@ -80,7 +80,7 @@ export default function TrackingInbox() {
         if (!token) return;
         setSubmitting(true);
         try {
-            const baseUrl = typeof window !== 'undefined' ? `${window.location.protocol}//${window.location.hostname}:3001` : 'http://localhost:3001';
+            const baseUrl = process.env.NEXT_PUBLIC_API_URL ? process.env.NEXT_PUBLIC_API_URL.replace(/\/api\/?$/, '') : (typeof window !== 'undefined' ? `${window.location.protocol}//${window.location.hostname}:3001` : 'http://localhost:3001');
 
             const pendingItems = safeItems.filter(i => i.status === 'Borrador' || i.status === 'Completado');
 
@@ -112,7 +112,7 @@ export default function TrackingInbox() {
             if (!token) return;
             setLoading(true);
             try {
-                const baseUrl = typeof window !== 'undefined' ? `${window.location.protocol}//${window.location.hostname}:3001` : 'http://localhost:3001';
+                const baseUrl = process.env.NEXT_PUBLIC_API_URL ? process.env.NEXT_PUBLIC_API_URL.replace(/\/api\/?$/, '') : (typeof window !== 'undefined' ? `${window.location.protocol}//${window.location.hostname}:3001` : 'http://localhost:3001');
                 const res = await fetch(`${baseUrl}/api/tracking/all`, {
                     headers: { "Authorization": `Bearer ${token}` }
                 });

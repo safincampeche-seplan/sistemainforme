@@ -80,7 +80,7 @@ export default function PublicationHub() {
         const fetchStatus = async () => {
             if (!token) return;
             try {
-                const baseUrl = typeof window !== 'undefined' ? `${window.location.protocol}//${window.location.hostname}:3001` : 'http://localhost:3001';
+                const baseUrl = process.env.NEXT_PUBLIC_API_URL ? process.env.NEXT_PUBLIC_API_URL.replace(/\/api\/?$/, '') : (typeof window !== 'undefined' ? `${window.location.protocol}//${window.location.hostname}:3001` : 'http://localhost:3001');
                 const res = await fetch(`${baseUrl}/api/consolidation/status?periodo=${selectedPeriod}`, {
                     headers: { "Authorization": `Bearer ${token}` }
                 });
@@ -102,7 +102,7 @@ export default function PublicationHub() {
         setLoadingPreview(true);
         setIsPreviewOpen(true);
         try {
-            const baseUrl = typeof window !== 'undefined' ? `${window.location.protocol}//${window.location.hostname}:3001` : 'http://localhost:3001';
+            const baseUrl = process.env.NEXT_PUBLIC_API_URL ? process.env.NEXT_PUBLIC_API_URL.replace(/\/api\/?$/, '') : (typeof window !== 'undefined' ? `${window.location.protocol}//${window.location.hostname}:3001` : 'http://localhost:3001');
             const res = await fetch(`${baseUrl}/api/consolidation/preview?periodo=${selectedPeriod}`, {
                 headers: { "Authorization": `Bearer ${token}` }
             });
@@ -120,7 +120,7 @@ export default function PublicationHub() {
     const handleConsolidate = async (type: 'word' | 'excel') => {
         setExporting(true);
         try {
-            const baseUrl = typeof window !== 'undefined' ? `${window.location.protocol}//${window.location.hostname}:3001` : 'http://localhost:3001';
+            const baseUrl = process.env.NEXT_PUBLIC_API_URL ? process.env.NEXT_PUBLIC_API_URL.replace(/\/api\/?$/, '') : (typeof window !== 'undefined' ? `${window.location.protocol}//${window.location.hostname}:3001` : 'http://localhost:3001');
             const endpoint = type === 'word' ? '/api/export/consolidated/word' : '/api/export/consolidated/excel';
             const res = await fetch(`${baseUrl}${endpoint}?periodo=${selectedPeriod}`, {
                 headers: { "Authorization": `Bearer ${token}` }

@@ -54,7 +54,7 @@ export default function NuevaEntidad() {
     useEffect(() => {
         const fetchInitialData = async () => {
             try {
-                const baseUrl = typeof window !== 'undefined' ? `${window.location.protocol}//${window.location.hostname}:3001` : 'http://localhost:3001';
+                const baseUrl = process.env.NEXT_PUBLIC_API_URL ? process.env.NEXT_PUBLIC_API_URL.replace(/\/api\/?$/, '') : (typeof window !== 'undefined' ? `${window.location.protocol}//${window.location.hostname}:3001` : 'http://localhost:3001');
                 const headers = { "Authorization": `Bearer ${token}` };
 
                 const [depRes, catRes] = await Promise.all([
@@ -100,7 +100,7 @@ export default function NuevaEntidad() {
 
         setLoading(true);
         try {
-            const baseUrl = typeof window !== 'undefined' ? `${window.location.protocol}//${window.location.hostname}:3001` : 'http://localhost:3001';
+            const baseUrl = process.env.NEXT_PUBLIC_API_URL ? process.env.NEXT_PUBLIC_API_URL.replace(/\/api\/?$/, '') : (typeof window !== 'undefined' ? `${window.location.protocol}//${window.location.hostname}:3001` : 'http://localhost:3001');
             const res = await fetch(`${baseUrl}/api/entities`, {
                 method: "POST",
                 headers: {

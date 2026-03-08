@@ -35,7 +35,7 @@ export default function RecycleBinPage() {
     const fetchDeletedRecords = async (type: string) => {
         setLoading(true);
         try {
-            const baseUrl = typeof window !== 'undefined' ? `${window.location.protocol}//${window.location.hostname}:3001` : 'http://localhost:3001';
+            const baseUrl = process.env.NEXT_PUBLIC_API_URL ? process.env.NEXT_PUBLIC_API_URL.replace(/\/api\/?$/, '') : (typeof window !== 'undefined' ? `${window.location.protocol}//${window.location.hostname}:3001` : 'http://localhost:3001');
             const res = await fetch(`${baseUrl}/api/admin/recycle-bin/${type}`, {
                 headers: { 'Authorization': `Bearer ${token}` }
             });
@@ -59,7 +59,7 @@ export default function RecycleBinPage() {
         setRestoring(true);
 
         try {
-            const baseUrl = typeof window !== 'undefined' ? `${window.location.protocol}//${window.location.hostname}:3001` : 'http://localhost:3001';
+            const baseUrl = process.env.NEXT_PUBLIC_API_URL ? process.env.NEXT_PUBLIC_API_URL.replace(/\/api\/?$/, '') : (typeof window !== 'undefined' ? `${window.location.protocol}//${window.location.hostname}:3001` : 'http://localhost:3001');
             const res = await fetch(`${baseUrl}/api/admin/recycle-bin/${selectedType}/${recordToRestore.id}/restore`, {
                 method: "POST",
                 headers: { 'Authorization': `Bearer ${token}` }

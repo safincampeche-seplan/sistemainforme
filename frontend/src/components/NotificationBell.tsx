@@ -27,7 +27,7 @@ export default function NotificationBell() {
             const token = localStorage.getItem('token');
             if (!token) return;
 
-            const res = await fetch('http://localhost:3001/api/notifications?limit=10', {
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api'}/notifications?limit=10`, {
                 headers: { 'Authorization': `Bearer ${token}` }
             });
             if (res.ok) {
@@ -59,7 +59,7 @@ export default function NotificationBell() {
     const markAsRead = async (id: string) => {
         try {
             const token = localStorage.getItem('token');
-            const res = await fetch(`http://localhost:3001/api/notifications/${id}/read`, {
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api'}/notifications/${id}/read`, {
                 method: 'POST',
                 headers: { 'Authorization': `Bearer ${token}` }
             });
@@ -74,7 +74,7 @@ export default function NotificationBell() {
     const markAllAsRead = async () => {
         try {
             const token = localStorage.getItem('token');
-            const res = await fetch('http://localhost:3001/api/notifications/read-all', {
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api'}/notifications/read-all`, {
                 method: 'POST',
                 headers: { 'Authorization': `Bearer ${token}` }
             });

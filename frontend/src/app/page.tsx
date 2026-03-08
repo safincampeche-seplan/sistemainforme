@@ -67,7 +67,7 @@ export default function Home() {
     if (!searchQuery.trim() || !token) return;
     setIsSearching(true);
     try {
-      const baseUrl = typeof window !== 'undefined' ? `${window.location.protocol}//${window.location.hostname}:3001` : 'http://localhost:3001';
+      const baseUrl = process.env.NEXT_PUBLIC_API_URL ? process.env.NEXT_PUBLIC_API_URL.replace(/\/api\/?$/, '') : (typeof window !== 'undefined' ? `${window.location.protocol}//${window.location.hostname}:3001` : 'http://localhost:3001');
       const res = await fetch(`${baseUrl}/api/dashboard/search?q=${encodeURIComponent(searchQuery)}&periodo=${selectedPeriod}`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
@@ -86,7 +86,7 @@ export default function Home() {
 
     async function fetchData() {
       try {
-        const baseUrl = typeof window !== 'undefined' ? `${window.location.protocol}//${window.location.hostname}:3001` : 'http://localhost:3001';
+        const baseUrl = process.env.NEXT_PUBLIC_API_URL ? process.env.NEXT_PUBLIC_API_URL.replace(/\/api\/?$/, '') : (typeof window !== 'undefined' ? `${window.location.protocol}//${window.location.hostname}:3001` : 'http://localhost:3001');
         const [statsRes, activitiesRes] = await Promise.all([
           fetch(`${baseUrl}/api/dashboard/stats?periodo=${selectedPeriod}`, {
             headers: { 'Authorization': `Bearer ${token}` }

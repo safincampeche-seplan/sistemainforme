@@ -55,9 +55,7 @@ export default function SecontPage() {
     const [search, setSearch] = useState('');
     const [notification, setNotification] = useState({ isOpen: false, title: '', message: '', type: 'success' as any });
 
-    const baseUrl = typeof window !== 'undefined'
-        ? `${window.location.protocol}//${window.location.hostname}:3001`
-        : 'http://localhost:3001';
+    const baseUrl = process.env.NEXT_PUBLIC_API_URL ? process.env.NEXT_PUBLIC_API_URL.replace(/\/api\/?$/, '') : (typeof window !== 'undefined' ? `${window.location.protocol}//${window.location.hostname}:3001` : 'http://localhost:3001');
 
     const showNotif = (title: string, message: string, type: any = 'success') =>
         setNotification({ isOpen: true, title, message, type });
