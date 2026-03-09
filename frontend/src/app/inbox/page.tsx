@@ -39,7 +39,7 @@ import { useSearchParams } from "next/navigation";
 
 export default function TrackingInbox() {
     const { token, user } = useAuth();
-    const isAdmin = user?.roles?.some(role => ["Administrador", "SuperAdministrador"].includes(role));
+    const isAdmin = user?.roles?.some(role => ["Administrador", 'super_admin'].includes(role));
 
     if (isAdmin) {
         return <AccessDenied />;

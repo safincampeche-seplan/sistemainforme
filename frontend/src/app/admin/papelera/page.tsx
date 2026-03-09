@@ -93,7 +93,7 @@ export default function RecycleBinPage() {
         (record.acronym && record.acronym.toLowerCase().includes(searchTerm.toLowerCase()))
     );
 
-    if (!user?.roles?.includes('SuperAdministrador')) {
+    if (!user?.roles?.includes('super_admin')) {
         return (
             <div className="flex h-full items-center justify-center p-8 bg-slate-50">
                 <div className="max-w-md text-center p-8 bg-white border border-slate-200 rounded-2xl shadow-sm">

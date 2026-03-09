@@ -1,10 +1,10 @@
 export const MODULE_PERMISSIONS = {
-    CAPTURA: ['SuperAdministrador', 'Administrador', 'Capturista'],
-    REVISION: ['SuperAdministrador', 'Administrador', 'Validador', 'SAFIN', 'SECONT', 'Capturista'],
-    EXPORTACION: ['SuperAdministrador', 'Administrador'],
-    ADMIN: ['SuperAdministrador'],
-    REVISION_ANEXO: ['SuperAdministrador', 'Administrador', 'Validador', 'SAFIN', 'SECONT', 'Capturista'],
-    GESTION_MATRICES: ['SuperAdministrador', 'Administrador', 'SAFIN', 'SECONT'],
+    CAPTURA: ['super_admin', 'admin', 'capturista'],
+    REVISION: ['super_admin', 'admin', 'validador', 'SAFIN', 'secont', 'capturista'],
+    EXPORTACION: ['super_admin', 'admin'],
+    ADMIN: ['super_admin'],
+    REVISION_ANEXO: ['super_admin', 'admin', 'validador', 'SAFIN', 'secont', 'capturista'],
+    GESTION_MATRICES: ['super_admin', 'admin', 'SAFIN', 'secont'],
 } as const;
 
 export type ModuleName = keyof typeof MODULE_PERMISSIONS;

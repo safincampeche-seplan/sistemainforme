@@ -61,7 +61,7 @@ export default function PublicationHub() {
 
     // Permission check for SEPLAN or Administrators
     const canConsolidate = user?.dependency?.toUpperCase() === 'SEPLAN' ||
-        user?.roles?.includes('Administrador');
+        user?.roles?.includes('admin');
 
     const [axes, setAxes] = useState<AxisProgress[]>([]);
     const [stats, setStats] = useState<StatsProgress | null>(null);

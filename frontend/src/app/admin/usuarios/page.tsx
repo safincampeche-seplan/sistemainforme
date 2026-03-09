@@ -53,7 +53,7 @@ interface UserProfile {
 
 export default function UsuariosPage() {
     const { token, user: currentUser } = useAuth();
-    const isSuperAdmin = currentUser?.roles?.includes('SuperAdministrador');
+    const isSuperAdmin = currentUser?.roles?.includes('super_admin');
 
     const [users, setUsers] = useState<UserProfile[]>([]);
     const [dependencies, setDependencies] = useState<{ id: number; name: string }[]>([]);
@@ -527,7 +527,7 @@ export default function UsuariosPage() {
                                     <UserCog className="size-4 text-slate-400" /> Roles en el Sistema
                                 </label>
                                 <div className="flex flex-wrap gap-2 p-3 border rounded-md bg-slate-50 dark:bg-slate-900/50">
-                                    {["Capturista", "Validador", "Administrador", "SuperAdministrador", "SECONT", "SAFIN"].map((role) => {
+                                    {["Capturista", "Validador", "Administrador", 'super_admin', "SECONT", "SAFIN"].map((role) => {
                                         const isSelected = formData.roles.includes(role);
                                         return (
                                             <Badge

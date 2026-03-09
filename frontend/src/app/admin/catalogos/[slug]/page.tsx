@@ -69,7 +69,7 @@ export default function CatalogEditorPage() {
     const [saving, setSaving] = useState(false);
     const { confirmEl, askConfirm } = useConfirmDialog();
 
-    const baseUrl = 'http://localhost:3001/api/admin/catalogs';
+    const baseUrl = process.env.NEXT_PUBLIC_API_URL ? process.env.NEXT_PUBLIC_API_URL.replace(/\/api\/?$/, '') + '/api/admin/catalogs' : (typeof window !== 'undefined' ? `${window.location.protocol}//${window.location.hostname}:3001/api/admin/catalogs` : 'http://localhost:3001/api/admin/catalogs');
 
     const fetchItems = async (page: number = 1) => {
         setLoading(true);

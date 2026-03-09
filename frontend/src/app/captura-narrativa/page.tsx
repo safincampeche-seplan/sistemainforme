@@ -34,7 +34,7 @@ function CapturaNarrativaContent() {
         if (typeof p === 'string' && p.includes('-')) return parseInt(p.split('-')[0]) || 2024;
         return parseInt(p) || 2024;
     })();
-    const isReadOnly = (currentYear < 2026) || isReviewMode || (savedStatus !== '' && savedStatus !== 'Borrador' && user?.roles?.includes('Capturista'));
+    const isReadOnly = (currentYear < 2026) || isReviewMode || (savedStatus !== '' && savedStatus !== 'Borrador' && user?.roles?.includes('capturista'));
     const [step, setStep] = useState(1);
     const [showAllMissions, setShowAllMissions] = useState(false);
     const [isDbOnline, setIsDbOnline] = useState(true);
@@ -1060,7 +1060,7 @@ function CapturaNarrativaContent() {
                                                                             ? catalogs.missions
                                                                             : catalogs.missions.filter((m: any) =>
                                                                                 m.id.toString() === (user as any)?.mission_id?.toString() ||
-                                                                                (user as any)?.roles?.includes('SuperAdministrador')
+                                                                                (user as any)?.roles?.includes('super_admin')
                                                                             );
 
                                                                         // Fallback: if filtered results are empty but we have missions, show all

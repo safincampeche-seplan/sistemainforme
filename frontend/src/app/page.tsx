@@ -160,14 +160,14 @@ export default function Home() {
           <Card className="border-none shadow-xl shadow-slate-200/50 bg-white group hover:scale-[1.02] transition-transform cursor-default overflow-hidden relative">
             <div className="absolute top-0 right-0 w-24 h-24 bg-guinda-50 rounded-bl-full -mr-12 -mt-12"></div>
             <CardHeader className="flex flex-row items-center justify-between pb-2 relative">
-              <CardTitle className="text-sm font-bold text-slate-500 uppercase tracking-wider">{user?.roles?.includes('SuperAdministrador') ? "Usuarios Totales" : "Total Programas (PPA)"}</CardTitle>
-              {user?.roles?.includes('SuperAdministrador') ? <Users className="h-4 w-4 text-guinda-500" /> : <FileText className="h-4 w-4 text-guinda-500" />}
+              <CardTitle className="text-sm font-bold text-slate-500 uppercase tracking-wider">{user?.roles?.includes('super_admin') ? "Usuarios Totales" : "Total Programas (PPA)"}</CardTitle>
+              {user?.roles?.includes('super_admin') ? <Users className="h-4 w-4 text-guinda-500" /> : <FileText className="h-4 w-4 text-guinda-500" />}
             </CardHeader>
             <CardContent className="relative">
-              <div className="text-3xl font-black text-slate-900">{loading ? "..." : (user?.roles?.includes('SuperAdministrador') ? (stats?.totalUsers ?? 0) : (stats?.totalPpa ?? 0))}</div>
+              <div className="text-3xl font-black text-slate-900">{loading ? "..." : (user?.roles?.includes('super_admin') ? (stats?.totalUsers ?? 0) : (stats?.totalPpa ?? 0))}</div>
               <p className="text-xs text-guinda-600 font-bold flex items-center mt-2 bg-guinda-50 px-2 py-1 rounded-full w-fit">
                 <TrendingUp className="h-3 w-3 mr-1" />
-                {user?.roles?.includes('SuperAdministrador') ? "Activos en el sistema" : (selectedPeriod === 2026 ? "+12% vs 2025" : `Ciclo ${selectedPeriod}`)}
+                {user?.roles?.includes('super_admin') ? "Activos en el sistema" : (selectedPeriod === 2026 ? "+12% vs 2025" : `Ciclo ${selectedPeriod}`)}
               </p>
             </CardContent>
           </Card>
@@ -189,14 +189,14 @@ export default function Home() {
           <Card className="border-none shadow-xl shadow-slate-200/50 bg-white group hover:scale-[1.02] transition-transform cursor-default overflow-hidden relative">
             <div className="absolute top-0 right-0 w-24 h-24 bg-amber-50 rounded-bl-full -mr-12 -mt-12"></div>
             <CardHeader className="flex flex-row items-center justify-between pb-2 relative">
-              <CardTitle className="text-sm font-bold text-slate-500 uppercase tracking-wider">{user?.roles?.includes('SuperAdministrador') ? "Dependencias" : "Cuadros Estadísticos"}</CardTitle>
+              <CardTitle className="text-sm font-bold text-slate-500 uppercase tracking-wider">{user?.roles?.includes('super_admin') ? "Dependencias" : "Cuadros Estadísticos"}</CardTitle>
               <BarChart3 className="h-4 w-4 text-amber-500" />
             </CardHeader>
             <CardContent className="relative">
-              <div className="text-3xl font-black text-slate-900">{loading ? "..." : (user?.roles?.includes('SuperAdministrador') ? "56" : (stats?.totalEntities ?? 0))}</div>
+              <div className="text-3xl font-black text-slate-900">{loading ? "..." : (user?.roles?.includes('super_admin') ? "56" : (stats?.totalEntities ?? 0))}</div>
               <p className="text-xs text-amber-600 font-bold flex items-center mt-2 bg-amber-50 px-2 py-1 rounded-full w-fit">
                 <AlertCircle className="h-3 w-3 mr-1" />
-                {user?.roles?.includes('SuperAdministrador') ? "6 con captura pendiente" : `${stats?.pendingValidations ?? 0} pendientes`}
+                {user?.roles?.includes('super_admin') ? "6 con captura pendiente" : `${stats?.pendingValidations ?? 0} pendientes`}
               </p>
             </CardContent>
           </Card>
@@ -205,7 +205,7 @@ export default function Home() {
             <div className="absolute top-0 right-0 w-24 h-24 bg-rose-50 rounded-bl-full -mr-12 -mt-12"></div>
             <CardHeader className="flex flex-row items-center justify-between pb-2 relative">
               <CardTitle className="text-sm font-bold text-slate-500 uppercase tracking-wider">
-                {user?.roles?.includes('SuperAdministrador') ? "Seguridad" : "Estado"}
+                {user?.roles?.includes('super_admin') ? "Seguridad" : "Estado"}
               </CardTitle>
               <Shield className="h-4 w-4 text-rose-500" />
             </CardHeader>
@@ -220,7 +220,7 @@ export default function Home() {
         </div>
 
         {/* Sectors Quick Access - Filament Style Dashboard Implementation */}
-        {(user?.roles?.includes('SuperAdministrador') || user?.roles?.includes('Administrador') || user?.roles?.includes('Validador')) && (
+        {(user?.roles?.includes('super_admin') || user?.roles?.includes('admin') || user?.roles?.includes('validador')) && (
           <div className="space-y-6">
             <div className="flex items-center justify-between">
               <div className="space-y-1">
@@ -264,14 +264,14 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div className="space-y-1">
                   <CardTitle className="text-lg flex items-center gap-2">
-                    {user?.roles?.includes('SuperAdministrador') ? (
+                    {user?.roles?.includes('super_admin') ? (
                       <>Monitor de Actividad Global <Sparkles className="h-5 w-5 text-guinda-600" /></>
                     ) : (
                       <>Actividad Reciente <Sparkles className="h-5 w-5 text-guinda-600" /></>
                     )}
                   </CardTitle>
                   <CardDescription>
-                    {user?.roles?.includes('SuperAdministrador')
+                    {user?.roles?.includes('super_admin')
                       ? "Resumen de movimientos realizados por todos los usuarios."
                       : "Acciones registradas en el sistema en tiempo real."}
                   </CardDescription>
@@ -310,8 +310,8 @@ export default function Home() {
                   <Link
                     key={item.id}
                     href={
-                      user?.roles?.includes('SuperAdministrador') ? "/admin/bitacora" :
-                        user?.roles?.includes('Validador') || user?.roles?.includes('Administrador') ? `/inbox/${item.type}/${item.id}` :
+                      user?.roles?.includes('super_admin') ? "/admin/bitacora" :
+                        user?.roles?.includes('validador') || user?.roles?.includes('admin') ? `/inbox/${item.type}/${item.id}` :
                           (item.status === 'Borrador' || item.status === 'Observado' ? `/captura-narrativa?id=${item.id}` : `/captura-narrativa/historial`)
                     }
                     className="flex items-center justify-between p-6 hover:bg-slate-50/50 transition-all group/item cursor-pointer"
@@ -328,7 +328,7 @@ export default function Home() {
                       <div>
                         <p className="text-sm font-bold text-slate-900 group-hover/item:text-guinda-600 transition-colors uppercase tracking-tight">{item.title}</p>
                         <p className="text-xs font-semibold text-slate-400 uppercase tracking-tight">
-                          {user?.roles?.includes('SuperAdministrador') ? "ID de Auditoría" : "Folio de Gestión"}: {item.id ? `#${item.id.toString().slice(-6)}` : 'N/A'}
+                          {user?.roles?.includes('super_admin') ? "ID de Auditoría" : "Folio de Gestión"}: {item.id ? `#${item.id.toString().slice(-6)}` : 'N/A'}
                         </p>
                       </div>
                     </div>
@@ -390,7 +390,7 @@ export default function Home() {
           </Card>
 
           <div className="space-y-6">
-            {user?.roles?.includes('SuperAdministrador') ? (
+            {user?.roles?.includes('super_admin') ? (
               <Card className="border-none shadow-xl shadow-indigo-100/50 bg-guinda-600 text-white rounded-[3rem] overflow-hidden group p-2">
                 <CardHeader className="pb-4 pt-6 px-6">
                   <div className="flex items-center justify-between">
@@ -419,7 +419,7 @@ export default function Home() {
                   </div>
                 </CardContent>
               </Card>
-            ) : user?.roles?.includes('Administrador') ? (
+            ) : user?.roles?.includes('admin') ? (
               <>
                 <Card className="border-none shadow-xl shadow-indigo-100/50 bg-guinda-600 text-white rounded-[2rem] overflow-hidden group">
                   <CardHeader className="pb-2">
@@ -487,7 +487,7 @@ export default function Home() {
                   </CardContent>
                 </Card>
               </>
-            ) : user?.roles?.includes('Capturista') ? (
+            ) : user?.roles?.includes('capturista') ? (
               <>
                 <Card className="border-none shadow-xl shadow-slate-200/50 bg-white rounded-[2rem]">
                   <CardHeader>
@@ -508,7 +508,7 @@ export default function Home() {
                   </CardContent>
                 </Card>
               </>
-            ) : user?.roles?.includes('Validador') ? (
+            ) : user?.roles?.includes('validador') ? (
               <>
                 <Card className="border-none shadow-xl shadow-slate-200/50 bg-white rounded-[2rem]">
                   <CardHeader>

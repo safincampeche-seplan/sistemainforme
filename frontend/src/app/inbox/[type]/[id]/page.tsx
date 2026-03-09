@@ -193,7 +193,7 @@ export default function ValidationDetail() {
 
     const displayTitle = isNarrative ? (data.ppa_name || data.title_name || data.title) : data.title;
     const currentStatus = data.status || "Pendiente";
-    const isValidador = user?.roles?.some(r => ["Validador", "Administrador", "SuperAdministrador", "SAFIN", "SECONT"].includes(r));
+    const isValidador = user?.roles?.some(r => ["Validador", "Administrador", 'super_admin', "SAFIN", "SECONT"].includes(r));
 
     const STATUS_MAP: Record<string, { label: string, color: string }> = {
         'draft': { label: 'Borrador', color: 'bg-slate-500' },

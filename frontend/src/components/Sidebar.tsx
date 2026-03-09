@@ -13,27 +13,27 @@ import changelogData from "@/lib/changelog.json";
 export function Sidebar() {
     const pathname = usePathname();
     const { user, token, selectedPeriod, logout } = useAuth();
-    const isSuperAdmin = (user?.roles?.includes('SuperAdministrador') || user?.roles?.includes('super_admin'));
+    const isSuperAdmin = (user?.roles?.includes('super_admin') || user?.roles?.includes('super_admin'));
     const [observationsCount, setObservationsCount] = useState(0);
 
     const navItems = [
         { href: "/", label: "Dashboard Personal", icon: BarChart3 },
-        { href: "/admin/dashboard", label: "Tablero Global", icon: BarChart3, roles: ["SuperAdministrador", "super_admin"] },
+        { href: "/admin/dashboard", label: "Tablero Global", icon: BarChart3, roles: ['super_admin', "super_admin"] },
         { href: "/captura-narrativa", label: "Captura Narrativa", icon: FileText, roles: ["Capturista", "capturista"] },
         { href: "/captura-narrativa/historial", label: "Mis Capturas", icon: History, roles: ["Capturista", "capturista"] },
         { href: "/observaciones-secont", label: "Observaciones SECONT", icon: AlertCircle, count: observationsCount > 0 ? observationsCount : undefined, roles: ["Capturista", "capturista"] },
-        { href: "/captura-estadistica", label: "Anexo Estadístico", icon: Database, roles: ["Capturista", "capturista", "Administrador", "admin", "SuperAdministrador", "super_admin", "SAFIN", "SECONT", "secont"] },
+        { href: "/captura-estadistica", label: "Anexo Estadístico", icon: Database, roles: ["Capturista", "capturista", "Administrador", "admin", 'super_admin', "super_admin", "SAFIN", "SECONT", "secont"] },
         { href: "/inbox", label: "Buzón de Control", icon: Inbox, roles: ["Capturista", "capturista"] },
-        { href: "/inbox/safin", label: "Bandeja SAFIN", icon: ClipboardCheck, roles: ["SAFIN", "Administrador", "admin", "SuperAdministrador", "super_admin"] },
-        { href: "/inbox/secont", label: "Bandeja SECONT", icon: ShieldCheck, roles: ["SECONT", "secont", "Validador", "validador", "SuperAdministrador", "super_admin"] },
-        { href: "/revision/sector/I", label: "Revisión Sectorial", icon: ShieldCheck, roles: ["Validador", "validador", "Administrador", "admin", "SuperAdministrador", "super_admin"] },
+        { href: "/inbox/safin", label: "Bandeja SAFIN", icon: ClipboardCheck, roles: ["SAFIN", "Administrador", "admin", 'super_admin', "super_admin"] },
+        { href: "/inbox/secont", label: "Bandeja SECONT", icon: ShieldCheck, roles: ["SECONT", "secont", "Validador", "validador", 'super_admin', "super_admin"] },
+        { href: "/revision/sector/I", label: "Revisión Sectorial", icon: ShieldCheck, roles: ["Validador", "validador", "Administrador", "admin", 'super_admin', "super_admin"] },
         { href: "/publicacion", label: "Publicación", icon: BookOpen, roles: ["Administrador", "admin", "Validador", "validador"] },
-        { href: "/admin/usuarios", label: "Gestión Usuarios", icon: Users, roles: ["SuperAdministrador", "super_admin"] },
-        { href: "/admin/dependencias", label: "Dependencias", icon: Building2, roles: ["SuperAdministrador", "super_admin"] },
-        { href: "/admin/configuracion/periodos", label: "Periodos y Etapas", icon: Calendar, roles: ["SuperAdministrador", "super_admin"] },
-        { href: "/admin/bitacora", label: "Bitácora Auditoría", icon: ShieldCheck, roles: ["SuperAdministrador", "super_admin"] },
-        { href: "/admin/papelera", label: "Papelera de Reciclaje", icon: ArchiveRestore, roles: ["SuperAdministrador", "super_admin"] },
-        { href: "/admin/configuracion", label: "Configuración General", icon: Settings, roles: ["SuperAdministrador", "super_admin"] },
+        { href: "/admin/usuarios", label: "Gestión Usuarios", icon: Users, roles: ['super_admin', "super_admin"] },
+        { href: "/admin/dependencias", label: "Dependencias", icon: Building2, roles: ['super_admin', "super_admin"] },
+        { href: "/admin/configuracion/periodos", label: "Periodos y Etapas", icon: Calendar, roles: ['super_admin', "super_admin"] },
+        { href: "/admin/bitacora", label: "Bitácora Auditoría", icon: ShieldCheck, roles: ['super_admin', "super_admin"] },
+        { href: "/admin/papelera", label: "Papelera de Reciclaje", icon: ArchiveRestore, roles: ['super_admin', "super_admin"] },
+        { href: "/admin/configuracion", label: "Configuración General", icon: Settings, roles: ['super_admin', "super_admin"] },
     ];
 
     const filteredItems = navItems.filter(item =>
@@ -41,7 +41,7 @@ export function Sidebar() {
     );
 
     useEffect(() => {
-        if (token && (user?.roles?.includes('Capturista') || user?.roles?.includes('capturista'))) {
+        if (token && (user?.roles?.includes('capturista') || user?.roles?.includes('capturista'))) {
             const fetchObservationsCount = async () => {
                 try {
                     const baseUrl = process.env.NEXT_PUBLIC_API_URL ? process.env.NEXT_PUBLIC_API_URL.replace(/\/api\/?$/, '') : (typeof window !== 'undefined' ? `${window.location.protocol}//${window.location.hostname}:3001` : 'http://localhost:3001');

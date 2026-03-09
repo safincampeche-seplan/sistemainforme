@@ -60,7 +60,7 @@ export function ExecutiveDashboard() {
         if (token) fetchData();
     }, [token, selectedPeriod]);
 
-    const isSecont = user?.roles?.includes('SECONT');
+    const isSecont = user?.roles?.includes('secont');
 
     if (loading && !data) {
         return (

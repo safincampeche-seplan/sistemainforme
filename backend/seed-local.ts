@@ -31,27 +31,41 @@ async function seed() {
         create: { id: 4, name: "Validador", guard_name: "web" }
     });
 
+    const secontRole = await prisma.role.upsert({
+        where: { id: 5 },
+        update: {},
+        create: { id: 5, name: "SECONT", guard_name: "web" }
+    });
+
     // 2. Dependencia
     const dep = await prisma.dependency.upsert({
         where: { id: 1 },
         update: {},
-        create: { id: 1, name: "Secretaría de Planeación", acronym: "SEPLAN", periodo: 2026 }
+        create: { id: 1, name: "Secretaría de Planeación", acronym: "SEPLAN" }
     });
 
-    // 3. Misión
+    // 3. Narrative Period (required for missions)
+    const period = await prisma.cat_narrative_periods.upsert({
+        where: { id: 1 },
+        update: {},
+        create: { id: 1, name: "2026" }
+    });
+
+    // 4. Misión
     const mission = await prisma.mission.upsert({
         where: { id: 1 },
         update: {},
-        create: { id: 1, name: "Gobierno Honesto y Transparente", code: "M1", periodo: 2026 }
+        create: { id: 1, name: "Gobierno Honesto y Transparente", code: 1, narrative_period_id: period.id }
     });
 
-    // 4. Usuarios adicionales
+    // 5. Usuarios adicionales
     const commonPassword = await bcrypt.hash('seplan123', 10);
 
     const usersData = [
-        { name: 'Super Admin', email: 'superadmin@seplan.com', roleId: 1 },
-        { name: 'SECONT User', email: 'secont@seplan.com', roleId: 2 },
-        { name: 'Cajero User', email: 'cajero@seplan.com', roleId: 3 },
+        { name: 'Super Admin', email: 'admin@seplan.gob.mx', roleId: 1 },
+        { name: 'Capturista Demo', email: 'saluddemo@seplan.gob.mx', roleId: 3 },
+        { name: 'Validador Demo', email: 'validadordemo@seplan.gob.mx', roleId: 4 },
+        { name: 'SECONT Demo', email: 'secontdemo@seplan.gob.mx', roleId: 5 },
     ];
 
     for (const userData of usersData) {
@@ -86,7 +100,7 @@ async function seed() {
 
     console.log("✅ Base de datos sembrada con éxito.");
     console.log("🔑 Contraseña para todos los nuevos: seplan123");
-    console.log("👤 Usuarios añadidos: superadmin@seplan.com, secont@seplan.com, cajero@seplan.com");
+    console.log("👤 Usuarios añadidos: admin@seplan.gob.mx, saluddemo@seplan.gob.mx, validadordemo@seplan.gob.mx");
 }
 
 seed()

@@ -55,7 +55,7 @@ interface GlobalStats {
 
 export default function GlobalDashboardPage() {
     const { token, user } = useAuth();
-    const isSuperAdmin = user?.roles?.includes('SuperAdministrador');
+    const isSuperAdmin = user?.roles?.includes('super_admin');
 
     const [stats, setStats] = useState<GlobalStats | null>(null);
     const [loading, setLoading] = useState(true);

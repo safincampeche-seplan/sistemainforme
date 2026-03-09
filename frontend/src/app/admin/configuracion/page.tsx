@@ -40,7 +40,7 @@ interface ConfigSettings {
 
 export default function ConfigPage() {
     const { token, user } = useAuth();
-    const isSuperAdmin = user?.roles?.includes('SuperAdministrador');
+    const isSuperAdmin = user?.roles?.includes('super_admin');
 
     const [settings, setSettings] = useState<ConfigSettings | null>(null);
     const [loading, setLoading] = useState(true);
