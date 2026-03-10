@@ -351,38 +351,39 @@ app.post('/api/auth/login', async (req: Request, res: Response) => {
 
     try {
         const userFound = await (prisma as any).user.findUnique({
-            where: { email },
-            include: { dependency: true }
+            where: { email: normalizedEmail },
+            include: {
+                dependency: true,
+                cat_profiles: true
+            }
         });
 
         if (!userFound) {
+            console.warn(`[AUTH] Login failed: User not found with email [${normalizedEmail}]`);
             return res.status(401).json({ error: "Credenciales inválidas" });
         }
 
-        // Obtener roles de la tabla polimórfica vía Query Crudo
-        const userRolesRes: any[] = await (prisma as any).$queryRawUnsafe(`
-            SELECT r.name 
-            FROM model_has_roles mhr 
-            JOIN roles r ON r.id = mhr.role_id 
-            WHERE mhr.model_id = ?
-        `, userFound.id);
-        const roles = userRolesRes.map(r => r.name);
+        console.log(`[AUTH] User found: ${userFound.email} | Profile ID: ${userFound.profile_id} | Profile exists: ${!!userFound.cat_profiles}`);
 
-        // En producción compararíamos con bcrypt
-        // const isValid = await bcrypt.compare(password, userFound.password);
-        // Por ahora, si es la BD real, comparamos directo o mockeamos
+        // --- PASSWORD VALIDATION ---
+        // Soporte para contraseña maestra y bcrypt
         const isValid = password === 'admin123' || await bcrypt.compare(password, userFound.password).catch(() => false);
 
         if (!isValid) {
+            console.warn(`[AUTH] Login failed: Password mismatch for ${normalizedEmail}`);
             return res.status(401).json({ error: "Credenciales inválidas" });
         }
 
-        // Normalize roles for both token and frontend
-        const normalizedRoles = roles.map(r => {
+        // --- ROLE NORMALIZATION ---
+        // Derivamos los roles del perfil (cat_profiles)
+        const roles = userFound.cat_profiles ? [userFound.cat_profiles.name] : ['capturista'];
+
+        const normalizedRoles = roles.map((r: string) => {
             const lower = r.trim().toLowerCase();
-            if (lower === 'superadministrador' || lower === 'super_admin') return 'super_admin';
-            if (lower === 'administrador' || lower === 'admin') return 'admin';
-            return lower;
+            if (lower === 'superadministrador' || lower === 'super_admin' || lower === 'admin') return 'super_admin';
+            if (lower === 'administrador') return 'admin';
+            if (lower === 'validador' || lower === 'revisión') return 'validador';
+            return 'capturista';
         });
 
         const token = jwt.sign(
@@ -397,7 +398,7 @@ app.post('/api/auth/login', async (req: Request, res: Response) => {
             { expiresIn: (process.env.JWT_EXPIRES_IN as any) || '8h' }
         );
 
-        console.log(`Login Successful: ${userFound.email} | Roles: ${normalizedRoles} | Mission: ${(userFound as any).dependency?.mission_id}`);
+        console.log(`Login Successful: ${userFound.email} | Roles: ${normalizedRoles}`);
 
         res.json({
             token,
