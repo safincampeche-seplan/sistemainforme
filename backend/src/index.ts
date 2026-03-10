@@ -4139,39 +4139,19 @@ app.get('/api/tracking/observations/count', authenticateToken, async (req: Reque
 
 app.get('/api/users', authenticateToken, authorize(['super_admin']), async (req: Request, res: Response) => {
     try {
-        // Since the User model doesn't have an explicit Prisma relation to model_has_roles,
-        // we fetch them manually or use a less restrictive query if (prisma as any) allows it.
-        // Let's try to fetch all users first.
         const users = await (prisma as any).user.findMany({
             where: { deleted_at: null },
             include: {
-                dependency: true
+                dependency: true,
+                cat_profiles: true
             }
         });
-
-        // Fetch roles for all users in one batch
-        const userIds = users.map((u: any) => u.id);
-        const allUserHasRoles = await (prisma as any).userHasRole.findMany({
-            where: {
-                model_id: { in: userIds },
-                model_type: 'App\\Models\\User'
-            },
-            include: {
-                role: true
-            }
-        });
-
-        // Map roles back to users
-        const rolesByUserId = allUserHasRoles.reduce((acc: any, ur: any) => {
-            const uid = ur.model_id.toString();
-            if (!acc[uid]) acc[uid] = [];
-            acc[uid].push(ur.role?.name);
-            return acc;
-        }, {});
 
         const cleanUsers = users.map((u: any) => {
             const { password, ...userWithoutPassword } = u;
-            const roles = rolesByUserId[u.id.toString()] || [];
+            // Derivamos el array de roles del nombre del perfil para compatibilidad con el frontend
+            const roles = u.cat_profiles ? [u.cat_profiles.name] : ['Capturista'];
+
             return {
                 ...userWithoutPassword,
                 roles,
@@ -4187,51 +4167,41 @@ app.get('/api/users', authenticateToken, authorize(['super_admin']), async (req:
     }
 });
 
-app.post('/api/users', authenticateToken, authorize(['super_admin']), async (req, res) => {
+app.post('/api/users', authenticateToken, authorize(['super_admin']), async (req: Request, res: Response) => {
     try {
         const validatedData = UserSchema.parse(req.body);
         const { name, email, password, roles, dependency_id, status } = validatedData;
 
-        const existingUser = await prisma.user.findUnique({ where: { email } });
+        const existingUser = await (prisma as any).user.findUnique({ where: { email } });
         if (existingUser) {
             return res.status(400).json({ error: "El email ya está registrado." });
         }
 
         const hashedPassword = await bcrypt.hash(password || 'seplan123', 10);
 
-        // Transaction to ensure user and roles are created together
-        const newUser = await prisma.$transaction(async (tx) => {
-            const user = await tx.user.create({
-                data: {
-                    name,
-                    email,
-                    password: hashedPassword,
-                    dependency_id: BigInt(dependency_id),
-                    is_active: status === 'Activo'
-                }
-            });
+        // Mapeo Simple de Roles a profile_id
+        // SuperAdministrador: 7, Capturista: 1, Validador: 12
+        let profileId = BigInt(1); // Default Capturista
+        const primaryRole = roles?.[0]?.toLowerCase() || '';
 
-            if (roles && roles.length > 0) {
-                const dbRoles = await tx.role.findMany({
-                    where: { name: { in: roles } }
-                });
+        if (primaryRole.includes('admin') || primaryRole.includes('super')) profileId = BigInt(7);
+        else if (primaryRole.includes('validador')) profileId = BigInt(12);
+        else if (primaryRole.includes('secont')) profileId = BigInt(4);
+        else if (primaryRole.includes('safin')) profileId = BigInt(5);
 
-                for (const role of dbRoles) {
-                    await tx.userHasRole.create({
-                        data: {
-                            role_id: role.id,
-                            model_id: user.id,
-                            model_type: 'App\\Models\\User'
-                        }
-                    });
-                }
+        const newUser = await (prisma as any).user.create({
+            data: {
+                name,
+                email,
+                password: hashedPassword,
+                dependency_id: BigInt(dependency_id),
+                profile_id: profileId,
+                is_active: status === 'Activo'
             }
-
-            return user;
         });
 
-        logActivity((req as any).user, "Usuario Creado", "user_admin", `Se creó el usuario SQL ${name}`);
-        res.json({ id: newUser.id, name: newUser.name, email: newUser.email });
+        logActivity((req as any).user, "Usuario Creado", "user_admin", `Se creó el usuario ${name} con perfil ID ${profileId}`);
+        res.json({ id: newUser.id.toString(), name: newUser.name, email: newUser.email });
     } catch (error) {
         if (error instanceof z.ZodError) {
             return res.status(400).json({ error: "Datos de usuario inválidos", details: error.issues });
@@ -4246,47 +4216,32 @@ app.put('/api/users/:id', authenticateToken, authorize(['super_admin']), async (
         const userId = BigInt(req.params.id as string);
         const { name, email, roles, dependency_id, status } = req.body;
 
-        const updatedUser = await prisma.$transaction(async (tx) => {
-            // Update basic info
-            const updateData: any = {
-                name,
-                email
-            };
-            if (dependency_id) updateData.dependency_id = BigInt(dependency_id);
-            if (status) updateData.is_active = status === 'Activo';
+        const updateData: any = {
+            name,
+            email
+        };
 
-            const user = await tx.user.update({
-                where: { id: userId },
-                data: updateData
-            });
+        if (dependency_id) updateData.dependency_id = BigInt(dependency_id);
+        if (status) updateData.is_active = status === 'Activo';
 
-            // Update roles if provided
-            if (roles) {
-                // Delete existing roles
-                await tx.userHasRole.deleteMany({
-                    where: { model_id: userId, model_type: 'App\\Models\\User' }
-                });
+        // Mapeo de Roles a profile_id para Edición
+        if (roles && roles.length > 0) {
+            let profileId = BigInt(1);
+            const primaryRole = roles[0].toLowerCase();
+            if (primaryRole.includes('admin') || primaryRole.includes('super')) profileId = BigInt(7);
+            else if (primaryRole.includes('validador')) profileId = BigInt(12);
+            else if (primaryRole.includes('secont')) profileId = BigInt(4);
+            else if (primaryRole.includes('safin')) profileId = BigInt(5);
 
-                // Add new roles
-                const dbRoles = await tx.role.findMany({
-                    where: { name: { in: roles } }
-                });
+            updateData.profile_id = profileId;
+        }
 
-                for (const role of dbRoles) {
-                    await tx.userHasRole.create({
-                        data: {
-                            role_id: role.id,
-                            model_id: userId,
-                            model_type: 'App\\Models\\User'
-                        }
-                    });
-                }
-            }
-
-            return user;
+        const updatedUser = await (prisma as any).user.update({
+            where: { id: userId },
+            data: updateData
         });
 
-        logActivity((req as any).user, "Usuario Editado", "user_admin", `Se modificó configuración SQL de ${name}`);
+        logActivity((req as any).user, "Usuario Editado", "user_admin", `Se modificó configuración de ${name}`);
         res.json({ id: updatedUser.id.toString(), name: updatedUser.name });
     } catch (error) {
         console.error("User update error:", error);
@@ -4301,12 +4256,12 @@ app.patch('/api/users/:id/status', authenticateToken, authorize(['super_admin'])
         const { status } = req.body; // 'Activo' | 'Suspendido'
         const is_active = status === 'Activo';
 
-        const user = await prisma.user.update({
+        const user = await (prisma as any).user.update({
             where: { id: userId },
             data: { is_active }
         });
 
-        logActivity((req as any).user, "Estado de Usuario Modificado", "user_admin", `Se cambió el estado SQL de ${user.name} a ${status}`);
+        logActivity((req as any).user, "Estado de Usuario Modificado", "user_admin", `Se cambió el estado de ${user.name} a ${status}`, req);
         res.json({ message: `Estado actualizado a ${status}`, status });
     } catch (error) {
         console.error("Status update error:", error);
@@ -4320,7 +4275,7 @@ app.put('/api/users/:id/status', authenticateToken, authorize(['super_admin']), 
         const { status } = req.body;
         const is_active = status === 'Activo';
 
-        const user = await prisma.user.update({
+        const user = await (prisma as any).user.update({
             where: { id: userId },
             data: { is_active }
         });
@@ -4340,12 +4295,12 @@ app.delete('/api/users/:id', authenticateToken, authorize(['super_admin']), asyn
             return res.status(403).json({ error: "No puedes eliminar tu propio usuario o cuentas raíz." });
         }
 
-        const user = await prisma.user.update({
+        const user = await (prisma as any).user.update({
             where: { id: userId },
             data: { deleted_at: new Date(), is_active: false }
         });
 
-        logActivity((req as any).user, "Usuario Eliminado (Soft Delete)", "user_admin", `El usuario SQL ${user.name} fue marcado como eliminado`, req);
+        logActivity((req as any).user, "Usuario Eliminado (Soft Delete)", "user_admin", `El usuario ${user.name} fue marcado como eliminado`, req);
         res.json({ message: "Usuario marcado como eliminado con éxito en MySQL" });
     } catch (error) {
         console.error("User deletion error:", error);
